@@ -1,83 +1,82 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
-import { Life, EventObject, Player, Scenario } from '@/types/game';
-import EventModal from './EventModal';
-import { Choice } from '@/types/game';
+import { useEffect, useRef, useState } from 'react';
+import { EventObject, Life } from '@/types/game';
 
 interface GameWorldProps {
   life: Life;
-  karma: number;
-  completedScenarios: string[];
-  onScenarioComplete: (scenarioId: string, choice: Choice) => void;
-  onAllScenariosComplete: () => void;
+  events: EventObject[];
+  onEventTrigger: (eventId: string) => void;
+  completedEvents: Set<string>;
 }
 
 const WORLD_WIDTH = 800;
 const WORLD_HEIGHT = 600;
-const PLAYER_SIZE = 40;
-const EVENT_SIZE = 50;
-const MOVE_SPEED = 5;
+const PLAYER_SIZE = 32;
+const EVENT_SIZE = 40;
+const MOVE_SPEED = 3;
+const ACCELERATION = 0.3;
+const FRICTION = 0.85;
 
-export default function GameWorld({
-  life,
-  karma,
-  completedScenarios,
-  onScenarioComplete,
-  onAllScenariosComplete,
-}: GameWorldProps) {
-  const [player, setPlayer] = useState<Player>({
-    x: WORLD_WIDTH / 2,
-    y: WORLD_HEIGHT / 2,
-    emoji: life.emoji,
-  });
+const LIFE_THEMES: Record<string, { bg: string; ground: string; decoration: string[] }> = {
+  microorganism: {
+    bg: 'from-teal-900 via-cyan-900 to-blue-900',
+    ground: 'bg-cyan-800/30',
+    decoration: ['🦠', '🧬', '💧', '⚛️'],
+  },
+  snake: {
+    bg: 'from-green-900 via-emerald-900 to-teal-900',
+    ground: 'bg-green-800/30',
+    decoration: ['🌿', '🪨', '🍃', '🌾'],
+  },
+  dog: {
+    bg: 'from-amber-800 via-yellow-800 to-orange-800',
+    ground: 'bg-amber-700/30',
+    decoration: ['🏡', '🦴', '🌳', '⚽'],
+  },
+  poor_student: {
+    bg: 'from-slate-800 via-gray-800 to-zinc-800',
+    ground: 'bg-slate-700/30',
+    decoration: ['📚', '🏫', '🚌', '☕'],
+  },
+  rich_human: {
+    bg: 'from-purple-900 via-indigo-900 to-violet-900',
+    ground: 'bg-purple-800/30',
+    decoration: ['💎', '🏛️', '🏰', '🎭'],
+  },
+  monk: {
+    bg: 'from-orange-900 via-amber-900 to-yellow-900',
+    ground: 'bg-orange-800/30',
+    decoration: ['🕉️', '🏯', '🌸', '🔔'],
+  },
+};
 
-  const [events, setEvents] = useState<EventObject[]>([]);
-  const [activeScenario, setActiveScenario] = useState<Scenario | null>(null);
+export default function GameWorld({ life, events, onEventTrigger, completedEvents }: GameWorldProps) {
+  const canvasRef = useRef<HTMLDivElement>(null);
+  const [playerPos, setPlayerPos] = useState({ x: WORLD_WIDTH / 2, y: WORLD_HEIGHT / 2 });
+  const [velocity, setVelocity] = useState({ x: 0, y: 0 });
   const [keys, setKeys] = useState<Set<string>>(new Set());
-  const gameLoopRef = useRef<number | undefined>(undefined);
+  const animationRef = useRef<number | undefined>(undefined);
+
+  const theme = LIFE_THEMES[life.id] || LIFE_THEMES.poor_student;
 
   useEffect(() => {
-    const availableScenarios = life.scenarios.filter(
-      (s) => !completedScenarios.includes(s.id)
-    );
-
-    const newEvents: EventObject[] = availableScenarios.map((scenario, index) => {
-      const angle = (index / availableScenarios.length) * Math.PI * 2;
-      const radius = Math.min(WORLD_WIDTH, WORLD_HEIGHT) * 0.35;
-      return {
-        id: scenario.id,
-        scenarioId: scenario.id,
-        x: WORLD_WIDTH / 2 + Math.cos(angle) * radius,
-        y: WORLD_HEIGHT / 2 + Math.sin(angle) * radius,
-        completed: false,
-        emoji: '✨',
-      };
-    });
-
-    setEvents(newEvents);
-  }, [life, completedScenarios]);
-
-  const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'w', 'a', 's', 'd'].includes(e.key)) {
-      e.preventDefault();
+    const handleKeyDown = (e: KeyboardEvent) => {
       setKeys((prev) => {
-        const newKeys = new Set(prev);
-        newKeys.add(e.key.toLowerCase());
-        return newKeys;
+        const newSet = new Set(prev);
+        newSet.add(e.key.toLowerCase());
+        return newSet;
       });
-    }
-  }, []);
+    };
 
-  const handleKeyUp = useCallback((e: KeyboardEvent) => {
-    setKeys((prev) => {
-      const newKeys = new Set(prev);
-      newKeys.delete(e.key.toLowerCase());
-      return newKeys;
-    });
-  }, []);
+    const handleKeyUp = (e: KeyboardEvent) => {
+      setKeys((prev) => {
+        const newSet = new Set(prev);
+        newSet.delete(e.key.toLowerCase());
+        return newSet;
+      });
+    };
 
-  useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
     window.addEventListener('keyup', handleKeyUp);
 
@@ -85,147 +84,146 @@ export default function GameWorld({
       window.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('keyup', handleKeyUp);
     };
-  }, [handleKeyDown, handleKeyUp]);
+  }, []);
 
   useEffect(() => {
     const gameLoop = () => {
-      setPlayer((prev) => {
-        let newX = prev.x;
-        let newY = prev.y;
+      setVelocity((vel) => {
+        let newVelX = vel.x;
+        let newVelY = vel.y;
 
-        if (keys.has('arrowleft') || keys.has('a')) newX -= MOVE_SPEED;
-        if (keys.has('arrowright') || keys.has('d')) newX += MOVE_SPEED;
-        if (keys.has('arrowup') || keys.has('w')) newY -= MOVE_SPEED;
-        if (keys.has('arrowdown') || keys.has('s')) newY += MOVE_SPEED;
+        if (keys.has('arrowup') || keys.has('w')) newVelY -= ACCELERATION;
+        if (keys.has('arrowdown') || keys.has('s')) newVelY += ACCELERATION;
+        if (keys.has('arrowleft') || keys.has('a')) newVelX -= ACCELERATION;
+        if (keys.has('arrowright') || keys.has('d')) newVelX += ACCELERATION;
 
-        newX = Math.max(PLAYER_SIZE / 2, Math.min(WORLD_WIDTH - PLAYER_SIZE / 2, newX));
-        newY = Math.max(PLAYER_SIZE / 2, Math.min(WORLD_HEIGHT - PLAYER_SIZE / 2, newY));
+        newVelX *= FRICTION;
+        newVelY *= FRICTION;
 
-        return { ...prev, x: newX, y: newY };
+        const maxSpeed = MOVE_SPEED;
+        const speed = Math.sqrt(newVelX ** 2 + newVelY ** 2);
+        if (speed > maxSpeed) {
+          newVelX = (newVelX / speed) * maxSpeed;
+          newVelY = (newVelY / speed) * maxSpeed;
+        }
+
+        return { x: newVelX, y: newVelY };
       });
 
-      gameLoopRef.current = requestAnimationFrame(gameLoop);
+      setPlayerPos((pos) => {
+        const newX = Math.max(PLAYER_SIZE / 2, Math.min(WORLD_WIDTH - PLAYER_SIZE / 2, pos.x + velocity.x));
+        const newY = Math.max(PLAYER_SIZE / 2, Math.min(WORLD_HEIGHT - PLAYER_SIZE / 2, pos.y + velocity.y));
+
+        events.forEach((event) => {
+          if (event.locked || completedEvents.has(event.id)) return;
+
+          const dx = newX - event.x;
+          const dy = newY - event.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < (PLAYER_SIZE + EVENT_SIZE) / 2) {
+            onEventTrigger(event.id);
+          }
+        });
+
+        return { x: newX, y: newY };
+      });
+
+      animationRef.current = requestAnimationFrame(gameLoop);
     };
 
-    gameLoopRef.current = requestAnimationFrame(gameLoop);
+    animationRef.current = requestAnimationFrame(gameLoop);
 
     return () => {
-      if (gameLoopRef.current) {
-        cancelAnimationFrame(gameLoopRef.current);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [keys]);
+  }, [keys, velocity, events, completedEvents, onEventTrigger]);
 
-  useEffect(() => {
-    events.forEach((event) => {
-      const distance = Math.sqrt(
-        Math.pow(player.x - event.x, 2) + Math.pow(player.y - event.y, 2)
-      );
-
-      if (distance < (PLAYER_SIZE + EVENT_SIZE) / 2 && !event.completed) {
-        const scenario = life.scenarios.find((s) => s.id === event.scenarioId);
-        if (scenario && !activeScenario) {
-          setActiveScenario(scenario);
-        }
-      }
-    });
-  }, [player, events, life.scenarios, activeScenario]);
-
-  const handleScenarioComplete = (choice: Choice) => {
-    if (activeScenario) {
-      onScenarioComplete(activeScenario.id, choice);
-      setEvents((prev) =>
-        prev.map((e) =>
-          e.scenarioId === activeScenario.id ? { ...e, completed: true } : e
-        )
-      );
-      setActiveScenario(null);
-
-      if (completedScenarios.length + 1 >= life.scenarios.length) {
-        setTimeout(() => {
-          onAllScenariosComplete();
-        }, 500);
-      }
-    }
-  };
+  const decorations = Array.from({ length: 12 }, (_, i) => ({
+    emoji: theme.decoration[i % theme.decoration.length],
+    x: (i * 123 + 50) % (WORLD_WIDTH - 40),
+    y: (i * 97 + 50) % (WORLD_HEIGHT - 40),
+  }));
 
   return (
-    <div className="flex flex-col items-center gap-4 p-4">
-      <div className="bg-gradient-to-r from-purple-900/50 to-indigo-900/50 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30 w-full max-w-4xl">
-        <div className="flex justify-between items-center text-white">
-          <div>
-            <span className="text-2xl mr-2">{life.emoji}</span>
-            <span className="font-bold text-lg">{life.name}</span>
-          </div>
-          <div className="flex gap-6">
-            <div>
-              <span className="text-purple-300">Karma: </span>
-              <span className={`font-bold ${karma >= 50 ? 'text-green-400' : karma >= 30 ? 'text-yellow-400' : 'text-red-400'}`}>
-                {karma}
-              </span>
-            </div>
-            <div>
-              <span className="text-purple-300">Events: </span>
-              <span className="font-bold text-blue-400">
-                {completedScenarios.length}/{life.scenarios.length}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <div className="relative flex items-center justify-center p-4">
       <div
-        className="relative bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 rounded-2xl border-4 border-purple-500/40 shadow-2xl overflow-hidden"
+        ref={canvasRef}
+        className={`relative rounded-2xl overflow-hidden shadow-2xl border-4 border-purple-500/30 bg-gradient-to-br ${theme.bg}`}
         style={{ width: WORLD_WIDTH, height: WORLD_HEIGHT }}
       >
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent" />
+        <div className={`absolute inset-0 ${theme.ground} opacity-40`} />
 
-        {events.map((event) => (
-          !event.completed && (
-            <div
-              key={event.id}
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-100"
-              style={{
-                left: event.x,
-                top: event.y,
-                width: EVENT_SIZE,
-                height: EVENT_SIZE,
-              }}
-            >
-              <div className="w-full h-full rounded-full bg-gradient-to-br from-yellow-400 to-purple-600 flex items-center justify-center text-3xl animate-pulse shadow-lg shadow-purple-500/50 border-2 border-yellow-300/50">
-                {event.emoji}
-              </div>
-            </div>
-          )
+        {decorations.map((deco, i) => (
+          <div
+            key={i}
+            className="absolute text-2xl opacity-30 pointer-events-none"
+            style={{ left: deco.x, top: deco.y }}
+          >
+            {deco.emoji}
+          </div>
         ))}
 
+        {events.map((event) => {
+          const isCompleted = completedEvents.has(event.id);
+          const isLocked = event.locked;
+
+          return (
+            <div
+              key={event.id}
+              className="absolute flex flex-col items-center"
+              style={{
+                left: event.x - EVENT_SIZE / 2,
+                top: event.y - EVENT_SIZE / 2,
+              }}
+            >
+              <div
+                className={`w-${EVENT_SIZE} h-${EVENT_SIZE} rounded-full flex items-center justify-center text-3xl transition-all duration-300 ${
+                  isCompleted
+                    ? 'opacity-30 grayscale'
+                    : isLocked
+                    ? 'opacity-40 blur-sm'
+                    : 'animate-pulse shadow-lg shadow-yellow-500/50'
+                }`}
+                style={{
+                  width: EVENT_SIZE,
+                  height: EVENT_SIZE,
+                  background: isCompleted
+                    ? 'rgba(100, 100, 100, 0.3)'
+                    : isLocked
+                    ? 'rgba(150, 150, 150, 0.2)'
+                    : 'radial-gradient(circle, rgba(255, 215, 0, 0.8), rgba(255, 165, 0, 0.6))',
+                }}
+              >
+                {isLocked ? '🔒' : isCompleted ? '✓' : '✨'}
+              </div>
+              {event.label && !isCompleted && (
+                <div className="mt-1 px-2 py-1 bg-black/70 rounded text-xs text-white whitespace-nowrap">
+                  {event.label}
+                </div>
+              )}
+            </div>
+          );
+        })}
+
         <div
-          className="absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-75"
+          className="absolute transition-all duration-75"
           style={{
-            left: player.x,
-            top: player.y,
+            left: playerPos.x - PLAYER_SIZE / 2,
+            top: playerPos.y - PLAYER_SIZE / 2,
             width: PLAYER_SIZE,
             height: PLAYER_SIZE,
           }}
         >
-          <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center text-2xl shadow-xl border-2 border-white/30">
-            {player.emoji}
-          </div>
+          <div className="text-4xl drop-shadow-lg">{life.emoji}</div>
+        </div>
+
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 px-4 py-2 rounded-lg text-white text-sm">
+          Use Arrow Keys or WASD to move
         </div>
       </div>
-
-      <div className="text-purple-300 text-sm text-center bg-black/30 rounded-lg p-3 border border-purple-500/20">
-        <p>Use <span className="font-bold text-white">Arrow Keys</span> or <span className="font-bold text-white">WASD</span> to move</p>
-        <p className="mt-1">Walk into glowing events to trigger scenarios</p>
-      </div>
-
-      {activeScenario && (
-        <EventModal
-          scenario={activeScenario}
-          onComplete={handleScenarioComplete}
-          onClose={() => setActiveScenario(null)}
-        />
-      )}
     </div>
   );
 }

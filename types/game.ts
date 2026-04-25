@@ -1,4 +1,4 @@
-export type MiniGameType = 'reflection' | 'timing' | 'memory' | 'choice';
+export type MiniGameType = 'reflection' | 'timing' | 'memory' | 'balance' | 'collect';
 
 export interface Choice {
   text: string;
@@ -6,7 +6,10 @@ export interface Choice {
   action: string;
   consequence: string;
   reflection: string;
-  karmaImpact: number;
+  intentionScore: number;
+  actionScore: number;
+  consequenceScore: number;
+  attachmentScore: number;
   flagsAdded?: string[];
   flagsRequired?: string[];
 }
@@ -31,11 +34,10 @@ export interface Life {
 
 export interface EventObject {
   id: string;
-  scenarioId: string;
   x: number;
   y: number;
-  completed: boolean;
-  emoji: string;
+  locked: boolean;
+  label?: string;
 }
 
 export interface Player {
@@ -45,9 +47,24 @@ export interface Player {
 }
 
 export interface GameState {
-  currentLifeId: string | null;
+  currentLifeId: string;
   karma: number;
   completedScenarios: string[];
   flags: string[];
-  lifeIndex: number;
+  visitedLives: string[];
+  choicePatterns: {
+    compassionate: number;
+    selfish: number;
+    detached: number;
+    attached: number;
+  };
+}
+
+export interface KarmaBreakdown {
+  intentionScore: number;
+  actionScore: number;
+  consequenceScore: number;
+  attachmentScore: number;
+  miniGameBonus: number;
+  total: number;
 }
