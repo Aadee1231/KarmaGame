@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Scenario, Choice, KarmaBreakdown } from '@/types/game';
 import { calculateKarmaChange } from '@/lib/karma';
+import MiniGameRouter from './minigames/MiniGameRouter';
 
 interface EventModalProps {
   scenario: Scenario;
@@ -10,27 +11,29 @@ interface EventModalProps {
   onClose: () => void;
 }
 
-type ModalStep = 'intro' | 'minigame' | 'choice' | 'reflection';
+type ModalStep = 'minigame_intro' | 'minigame' | 'minigame_result' | 'scenario_intro' | 'choice' | 'reflection';
 
 export default function EventModal({ scenario, onComplete, onClose }: EventModalProps) {
-  const [step, setStep] = useState<ModalStep>('intro');
+  const [step, setStep] = useState<ModalStep>('minigame_intro');
   const [selectedChoice, setSelectedChoice] = useState<Choice | null>(null);
-  const [miniGameBonus, setMiniGameBonus] = useState(0);
   const [karmaBreakdown, setKarmaBreakdown] = useState<KarmaBreakdown | null>(null);
+  const [miniGameResult, setMiniGameResult] = useState<{ success: boolean; consequenceBonus: number; message: string } | null>(null);
 
-  const handleMiniGameComplete = (bonus: number) => {
-    setMiniGameBonus(bonus);
-    setStep('choice');
+  const handleMiniGameComplete = (result: { success: boolean; consequenceBonus: number; message: string }) => {
+    setMiniGameResult(result);
+    setStep('minigame_result');
   };
 
   const handleChoiceSelect = (choice: Choice) => {
+    const bonus = miniGameResult?.consequenceBonus || 0;
     const breakdown = calculateKarmaChange(
       choice.intentionScore,
       choice.actionScore,
       choice.consequenceScore,
       choice.attachmentScore,
-      miniGameBonus
+      bonus
     );
+
     setKarmaBreakdown(breakdown);
     setSelectedChoice(choice);
     setStep('reflection');
@@ -43,11 +46,179 @@ export default function EventModal({ scenario, onComplete, onClose }: EventModal
     }
   };
 
+  const getMiniGameIntro = () => {
+    const intros: Record<string, { title: string; objective: string; rules: string; relevance: string }> = {
+      'karma-balance': {
+        title: 'Balance Test',
+        objective: 'Keep the marker centered for 60 seconds',
+        rules: 'The marker drifts naturally. Use A/D or Arrow keys to nudge it back to center. You have 2 minutes total.',
+        relevance: 'Life constantly pulls you off balance. Can you maintain equilibrium under pressure?'
+      },
+      'intention-outcome': {
+        title: 'Intention vs Outcome',
+        objective: 'Correctly classify 3 out of 5 scenarios',
+        rules: 'Read each scenario and decide if it\'s driven more by Intention or Outcome. You have 30 seconds per card.',
+        relevance: 'Karma weighs both why you act and what results. Can you distinguish them?'
+      },
+      'impulse-control': {
+        title: 'Impulse Control',
+        objective: 'Resist clicking the tempting button for 90 seconds',
+        rules: 'A glowing button will appear and move around. Do NOT click it until the timer ends. Clicking early = failure.',
+        relevance: 'Desire and temptation test your discipline. Can you wait when everything urges you to act?'
+      },
+      'breath-focus': {
+        title: 'Breath & Presence',
+        objective: 'Press Space at 12 breath peaks within 2 minutes',
+        rules: 'Watch the breathing circle expand (inhale) and contract (exhale). Press Space at the peak of each phase.',
+        relevance: 'Mindfulness requires presence. Can you stay synchronized with the rhythm of life?'
+      },
+      'share-or-hoard': {
+        title: 'Share or Hoard',
+        objective: 'Collect 10+ food items and share at least 4 times',
+        rules: 'Food appears randomly. Click to collect. Press S to share with others. Balance survival with generosity over 2 minutes.',
+        relevance: 'Resources are limited. Do you hoard for security or share despite scarcity?'
+      },
+      'fight-or-flee': {
+        title: 'Fight or Flee',
+        objective: 'Respond correctly to 5 out of 8 threats',
+        rules: 'Threats appear with context. Press Space (confront/warn) or S/Down (retreat). You have 20 seconds per threat.',
+        relevance: 'Not all conflicts require confrontation. Can you discern when to stand firm and when to yield?'
+      },
+      'donation-dilemma': {
+        title: 'Donation Dilemma',
+        objective: 'Allocate 100 coins: help impact ≥50, ego meter ≤35',
+        rules: 'You have 3 minutes to distribute coins between Public Donation, Private Help, and Self Comfort. Balance impact and humility.',
+        relevance: 'Giving can feed the ego or serve others. What motivates your generosity?'
+      },
+      'social-pressure': {
+        title: 'Social Pressure',
+        objective: 'Make the right choice in 5 out of 8 situations',
+        rules: 'Face social scenarios where the crowd has opinions. Choose to Speak or Stay Silent. You have 20 seconds per situation.',
+        relevance: 'The crowd\'s voice is loud. Can you act with integrity when it conflicts with popularity?'
+      },
+      'memory-consequences': {
+        title: 'Memory of Consequences',
+        objective: 'Remember and repeat a 7-symbol sequence',
+        rules: 'Watch symbols appear one by one (4s each). Then click them in the correct order.',
+        relevance: 'Actions create chains of consequences. Can you remember the pattern and not repeat mistakes?'
+      },
+      'ego-trap': {
+        title: 'Ego Trap',
+        objective: 'Score ≥15 points, click ≤5 ego bubbles in 90 seconds',
+        rules: 'Click blue/green compassion bubbles (+1). Avoid yellow/orange ego bubbles (-2). They rise from bottom.',
+        relevance: 'Even spiritual practice can inflate the ego. Can you pursue growth without self-importance?'
+      },
+      'micro-life-chaos': {
+        title: 'Micro-Life Chaos',
+        objective: 'Survive as a microorganism for 60 seconds',
+        rules: 'Use WASD or arrows to move. Avoid hazards (soap, sun, shoes). You slip and slide. Good luck.',
+        relevance: 'Sometimes you have almost no control. Can you accept chaos and still try your best?'
+      }
+    };
+
+    return intros[scenario.miniGameType] || intros['karma-balance'];
+  };
+
+  const miniGameIntro = getMiniGameIntro();
+
   return (
     <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
       <div className="bg-gradient-to-br from-slate-900/95 to-purple-900/95 backdrop-blur-xl rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border-2 border-purple-500/30 shadow-2xl">
         <div className="p-8">
-          {step === 'intro' && (
+          {step === 'minigame_intro' && (
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-purple-200 text-center">
+                {miniGameIntro.title}
+              </h2>
+              
+              <div className="bg-black/40 rounded-xl p-6 border border-purple-500/30 space-y-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-purple-300 mb-2">Objective</h3>
+                  <p className="text-slate-200">{miniGameIntro.objective}</p>
+                </div>
+                
+                <div>
+                  <h3 className="text-lg font-semibold text-purple-300 mb-2">Rules</h3>
+                  <p className="text-slate-200">{miniGameIntro.rules}</p>
+                </div>
+                
+                <div className="bg-purple-900/30 rounded-lg p-4 border border-purple-500/20">
+                  <h3 className="text-lg font-semibold text-yellow-300 mb-2">Why This Matters</h3>
+                  <p className="text-yellow-100 italic">{miniGameIntro.relevance}</p>
+                </div>
+              </div>
+
+              <button
+                onClick={() => setStep('minigame')}
+                className="w-full py-5 px-6 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-xl font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Begin Challenge
+              </button>
+              <button
+                onClick={() => setStep('scenario_intro')}
+                className="w-full py-2 px-4 text-slate-500 hover:text-slate-300 text-xs transition-all"
+              >
+                Skip Challenge (dev)
+              </button>
+            </div>
+          )}
+
+          {step === 'minigame' && (
+            <div className="space-y-6">
+              <MiniGameRouter
+                miniGameType={scenario.miniGameType}
+                onComplete={handleMiniGameComplete}
+                scenarioTitle={scenario.title}
+              />
+              <button
+                onClick={() => {
+                  handleMiniGameComplete({
+                    success: false,
+                    consequenceBonus: -1,
+                    message: "You chose to abandon the challenge. Sometimes walking away teaches its own lesson."
+                  });
+                }}
+                className="w-full py-3 px-6 bg-gradient-to-r from-red-600/50 to-orange-600/50 hover:from-red-500/50 hover:to-orange-500/50 text-white font-semibold rounded-xl transition-all duration-300 border border-red-500/30"
+              >
+                Skip Challenge (-1 to consequences)
+              </button>
+            </div>
+          )}
+
+          {step === 'minigame_result' && miniGameResult && (
+            <div className="space-y-6">
+              <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-purple-200 text-center">
+                Challenge Result
+              </h3>
+              <div className={`bg-gradient-to-br ${miniGameResult.success ? 'from-green-900/30 to-emerald-900/30 border-green-500/30' : 'from-red-900/30 to-orange-900/30 border-red-500/30'} rounded-xl p-8 border-2`}>
+                <div className="text-center mb-4">
+                  <div className="text-6xl mb-4">
+                    {miniGameResult.success ? '✓' : '✗'}
+                  </div>
+                  <p className={`text-xl font-semibold ${miniGameResult.success ? 'text-green-300' : 'text-red-300'}`}>
+                    {miniGameResult.success ? 'Success' : 'Failed'}
+                  </p>
+                </div>
+                <p className="text-lg text-slate-200 leading-relaxed text-center italic">
+                  "{miniGameResult.message}"
+                </p>
+                <div className="mt-6 text-center">
+                  <p className="text-sm text-slate-400">Consequence Modifier:</p>
+                  <p className={`text-2xl font-bold ${miniGameResult.consequenceBonus >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                    {miniGameResult.consequenceBonus >= 0 ? '+' : ''}{miniGameResult.consequenceBonus}
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => setStep('scenario_intro')}
+                className="w-full py-5 px-6 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white text-xl font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Continue to Scenario
+              </button>
+            </div>
+          )}
+
+          {step === 'scenario_intro' && (
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-purple-200">
                 {scenario.title}
@@ -55,24 +226,30 @@ export default function EventModal({ scenario, onComplete, onClose }: EventModal
               <p className="text-lg text-slate-200 leading-relaxed">
                 {scenario.description}
               </p>
+              {miniGameResult && (
+                <div className={`bg-gradient-to-br ${miniGameResult.success ? 'from-green-900/20 to-emerald-900/20 border-green-500/20' : 'from-red-900/20 to-orange-900/20 border-red-500/20'} rounded-xl p-4 border-2`}>
+                  <p className="text-sm text-slate-300 text-center">
+                    Your performance in the challenge has {miniGameResult.success ? 'improved' : 'worsened'} your circumstances ({miniGameResult.consequenceBonus >= 0 ? '+' : ''}{miniGameResult.consequenceBonus} to consequences).
+                  </p>
+                </div>
+              )}
               <button
-                onClick={() => setStep('minigame')}
-                className="w-full py-4 px-6 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
+                onClick={() => setStep('choice')}
+                className="w-full py-5 px-6 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-xl font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
-                Continue
+                Face the Choice
               </button>
             </div>
           )}
 
-          {step === 'minigame' && (
-            <MiniGame
-              type={scenario.miniGameType}
-              onComplete={handleMiniGameComplete}
-            />
-          )}
-
           {step === 'choice' && (
             <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-purple-200">
+                {scenario.title}
+              </h2>
+              <p className="text-lg text-slate-200 leading-relaxed mb-6">
+                {scenario.description}
+              </p>
               <h3 className="text-2xl font-bold text-purple-200">
                 What will you do?
               </h3>
@@ -92,6 +269,15 @@ export default function EventModal({ scenario, onComplete, onClose }: EventModal
                   </button>
                 ))}
               </div>
+              <button
+                onClick={() => {
+                  const neutralChoice = scenario.choices[0];
+                  handleChoiceSelect(neutralChoice);
+                }}
+                className="w-full py-3 px-6 bg-gradient-to-r from-red-600/50 to-orange-600/50 hover:from-red-500/50 hover:to-orange-500/50 text-white font-semibold rounded-xl transition-all duration-300 border border-red-500/30"
+              >
+                Skip Scenario (auto-select first choice)
+              </button>
             </div>
           )}
 
@@ -144,15 +330,15 @@ export default function EventModal({ scenario, onComplete, onClose }: EventModal
                         {karmaBreakdown.attachmentScore >= 0 ? '+' : ''}{karmaBreakdown.attachmentScore}
                       </span>
                     </div>
-                    {miniGameBonus !== 0 && (
-                      <div className="col-span-2">
-                        <span className="text-slate-400">Mini-game Bonus:</span>
-                        <span className={`ml-2 font-bold ${miniGameBonus >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-                          {miniGameBonus >= 0 ? '+' : ''}{miniGameBonus}
-                        </span>
-                      </div>
-                    )}
                   </div>
+                  {miniGameResult && (
+                    <div className="pt-3 border-t border-slate-600/30">
+                      <span className="text-slate-400 text-xs">Mini-game Bonus:</span>
+                      <span className={`ml-2 font-bold ${miniGameResult.consequenceBonus >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                        {miniGameResult.consequenceBonus >= 0 ? '+' : ''}{miniGameResult.consequenceBonus}
+                      </span>
+                    </div>
+                  )}
                   <div className="pt-3 border-t border-slate-600/30 mt-3">
                     <span className="text-slate-300">Total Karma Change:</span>
                     <span className={`ml-2 text-2xl font-bold ${karmaBreakdown.total >= 0 ? 'text-green-400' : 'text-red-400'}`}>
@@ -170,310 +356,6 @@ export default function EventModal({ scenario, onComplete, onClose }: EventModal
               </button>
             </div>
           )}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function MiniGame({ type, onComplete }: { type: string; onComplete: (bonus: number) => void }) {
-  const [gameState, setGameState] = useState<'playing' | 'success' | 'fail'>('playing');
-
-  if (type === 'reflection') {
-    return (
-      <div className="space-y-6">
-        <h3 className="text-2xl font-bold text-purple-200">Moment of Reflection</h3>
-        <div className="bg-black/30 rounded-xl p-8 border border-purple-500/20 text-center">
-          <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-yellow-400 to-purple-600 animate-pulse mb-6" />
-          <p className="text-purple-100 mb-6">
-            Take a moment to consider this situation deeply.
-          </p>
-          <p className="text-slate-400 text-sm">
-            What would you do?
-          </p>
-        </div>
-        <button
-          onClick={() => onComplete(0)}
-          className="w-full py-4 px-6 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-semibold rounded-xl transition-all duration-300"
-        >
-          I'm Ready to Choose
-        </button>
-      </div>
-    );
-  }
-
-  if (type === 'timing') {
-    return <TimingGame onComplete={onComplete} />;
-  }
-
-  if (type === 'memory') {
-    return <MemoryGame onComplete={onComplete} />;
-  }
-
-  if (type === 'balance') {
-    return <BalanceGame onComplete={onComplete} />;
-  }
-
-  if (type === 'collect') {
-    return <CollectGame onComplete={onComplete} />;
-  }
-
-  return null;
-}
-
-function TimingGame({ onComplete }: { onComplete: (bonus: number) => void }) {
-  const [position, setPosition] = useState(0);
-  const [direction, setDirection] = useState(1);
-  const [gameActive, setGameActive] = useState(true);
-  const animationRef = useRef<number | undefined>(undefined);
-
-  useEffect(() => {
-    if (!gameActive) return;
-
-    const animate = () => {
-      setPosition((prev) => {
-        const next = prev + direction * 2;
-        if (next >= 100 || next <= 0) {
-          setDirection((d) => -d);
-        }
-        return Math.max(0, Math.min(100, next));
-      });
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-    animationRef.current = requestAnimationFrame(animate);
-    return () => {
-      if (animationRef.current) cancelAnimationFrame(animationRef.current);
-    };
-  }, [direction, gameActive]);
-
-  const handleClick = () => {
-    setGameActive(false);
-    const inTarget = position >= 40 && position <= 60;
-    const bonus = inTarget ? 2 : -2;
-    setTimeout(() => onComplete(bonus), 500);
-  };
-
-  return (
-    <div className="space-y-6">
-      <h3 className="text-2xl font-bold text-purple-200">Timing Challenge</h3>
-      <div className="bg-black/30 rounded-xl p-8 border border-purple-500/20">
-        <p className="text-purple-100 mb-6 text-center">
-          Press when the marker is in the center zone!
-        </p>
-        <div className="relative h-12 bg-slate-800 rounded-lg mb-6 overflow-hidden">
-          <div className="absolute inset-y-0 left-[40%] right-[40%] bg-green-500/30 border-x-2 border-green-500" />
-          <div
-            className="absolute inset-y-0 w-2 bg-yellow-400 transition-all duration-75"
-            style={{ left: `${position}%` }}
-          />
-        </div>
-        <button
-          onClick={handleClick}
-          disabled={!gameActive}
-          className="w-full py-4 px-6 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-500 hover:to-orange-500 disabled:opacity-50 text-white font-semibold rounded-xl transition-all duration-300"
-        >
-          {gameActive ? 'Press Now!' : 'Processing...'}
-        </button>
-      </div>
-    </div>
-  );
-}
-
-function MemoryGame({ onComplete }: { onComplete: (bonus: number) => void }) {
-  const [sequence, setSequence] = useState<number[]>([]);
-  const [userSequence, setUserSequence] = useState<number[]>([]);
-  const [showing, setShowing] = useState(true);
-  const [gameOver, setGameOver] = useState(false);
-
-  useEffect(() => {
-    const seq = Array.from({ length: 4 }, () => Math.floor(Math.random() * 4));
-    setSequence(seq);
-    setTimeout(() => setShowing(false), 3000);
-  }, []);
-
-  const handleClick = (index: number) => {
-    if (showing || gameOver) return;
-    
-    const newUserSeq = [...userSequence, index];
-    setUserSequence(newUserSeq);
-
-    if (newUserSeq[newUserSeq.length - 1] !== sequence[newUserSeq.length - 1]) {
-      setGameOver(true);
-      setTimeout(() => onComplete(-2), 500);
-      return;
-    }
-
-    if (newUserSeq.length === sequence.length) {
-      setGameOver(true);
-      setTimeout(() => onComplete(2), 500);
-    }
-  };
-
-  const colors = ['bg-red-500', 'bg-blue-500', 'bg-green-500', 'bg-yellow-500'];
-
-  return (
-    <div className="space-y-6">
-      <h3 className="text-2xl font-bold text-purple-200">Memory Challenge</h3>
-      <div className="bg-black/30 rounded-xl p-8 border border-purple-500/20">
-        <p className="text-purple-100 mb-6 text-center">
-          {showing ? 'Watch the sequence...' : 'Repeat the pattern!'}
-        </p>
-        <div className="grid grid-cols-2 gap-4 mb-6">
-          {colors.map((color, index) => (
-            <button
-              key={index}
-              onClick={() => handleClick(index)}
-              disabled={showing || gameOver}
-              className={`h-24 rounded-xl ${color} ${
-                showing && sequence[Math.floor(Date.now() / 750) % sequence.length] === index
-                  ? 'opacity-100 scale-110'
-                  : 'opacity-50'
-              } transition-all duration-200 disabled:cursor-not-allowed`}
-            />
-          ))}
-        </div>
-        {gameOver && (
-          <p className="text-center text-slate-300">
-            {userSequence.length === sequence.length ? 'Success!' : 'Incorrect sequence'}
-          </p>
-        )}
-      </div>
-    </div>
-  );
-}
-
-function BalanceGame({ onComplete }: { onComplete: (bonus: number) => void }) {
-  const [position, setPosition] = useState(50);
-  const [timeLeft, setTimeLeft] = useState(5);
-  const [gameActive, setGameActive] = useState(true);
-
-  useEffect(() => {
-    if (!gameActive) return;
-
-    const drift = setInterval(() => {
-      setPosition((prev) => {
-        const drift = (Math.random() - 0.5) * 5;
-        return Math.max(0, Math.min(100, prev + drift));
-      });
-    }, 100);
-
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 0.1) {
-          setGameActive(false);
-          const inZone = position >= 40 && position <= 60;
-          setTimeout(() => onComplete(inZone ? 2 : -2), 500);
-          return 0;
-        }
-        return prev - 0.1;
-      });
-    }, 100);
-
-    return () => {
-      clearInterval(drift);
-      clearInterval(timer);
-    };
-  }, [gameActive, position, onComplete]);
-
-  const handleLeft = () => {
-    if (!gameActive) return;
-    setPosition((prev) => Math.max(0, prev - 5));
-  };
-
-  const handleRight = () => {
-    if (!gameActive) return;
-    setPosition((prev) => Math.min(100, prev + 5));
-  };
-
-  return (
-    <div className="space-y-6">
-      <h3 className="text-2xl font-bold text-purple-200">Balance Challenge</h3>
-      <div className="bg-black/30 rounded-xl p-8 border border-purple-500/20">
-        <p className="text-purple-100 mb-4 text-center">
-          Keep the marker in the center for {timeLeft.toFixed(1)}s
-        </p>
-        <div className="relative h-12 bg-slate-800 rounded-lg mb-6 overflow-hidden">
-          <div className="absolute inset-y-0 left-[40%] right-[40%] bg-green-500/30 border-x-2 border-green-500" />
-          <div
-            className="absolute inset-y-0 w-3 bg-purple-500 transition-all duration-100"
-            style={{ left: `${position}%` }}
-          />
-        </div>
-        <div className="flex gap-4">
-          <button
-            onClick={handleLeft}
-            disabled={!gameActive}
-            className="flex-1 py-3 px-6 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 disabled:opacity-50 text-white font-semibold rounded-xl"
-          >
-            ← Left
-          </button>
-          <button
-            onClick={handleRight}
-            disabled={!gameActive}
-            className="flex-1 py-3 px-6 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 disabled:opacity-50 text-white font-semibold rounded-xl"
-          >
-            Right →
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function CollectGame({ onComplete }: { onComplete: (bonus: number) => void }) {
-  const [items, setItems] = useState<{ id: number; x: number; y: number }[]>([]);
-  const [collected, setCollected] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(5);
-  const [gameActive, setGameActive] = useState(true);
-
-  useEffect(() => {
-    const initialItems = Array.from({ length: 6 }, (_, i) => ({
-      id: i,
-      x: Math.random() * 80 + 10,
-      y: Math.random() * 60 + 10,
-    }));
-    setItems(initialItems);
-
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 0.1) {
-          setGameActive(false);
-          const success = collected >= 4;
-          setTimeout(() => onComplete(success ? 2 : -2), 500);
-          return 0;
-        }
-        return prev - 0.1;
-      });
-    }, 100);
-
-    return () => clearInterval(timer);
-  }, [collected, onComplete]);
-
-  const handleClick = (id: number) => {
-    if (!gameActive) return;
-    setItems((prev) => prev.filter((item) => item.id !== id));
-    setCollected((prev) => prev + 1);
-  };
-
-  return (
-    <div className="space-y-6">
-      <h3 className="text-2xl font-bold text-purple-200">Collection Challenge</h3>
-      <div className="bg-black/30 rounded-xl p-8 border border-purple-500/20">
-        <p className="text-purple-100 mb-4 text-center">
-          Collect 4+ items in {timeLeft.toFixed(1)}s (Collected: {collected})
-        </p>
-        <div className="relative h-64 bg-slate-800 rounded-lg overflow-hidden">
-          {items.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => handleClick(item.id)}
-              className="absolute w-8 h-8 bg-yellow-400 rounded-full hover:bg-yellow-300 transition-all"
-              style={{ left: `${item.x}%`, top: `${item.y}%` }}
-            >
-              ✨
-            </button>
-          ))}
         </div>
       </div>
     </div>

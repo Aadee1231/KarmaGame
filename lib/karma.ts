@@ -20,7 +20,7 @@ export function calculateKarmaChange(
     consequenceScore,
     attachmentScore,
     miniGameBonus,
-    total: Math.round(total * 10) / 10,
+    total: Math.round(total),
   };
 }
 

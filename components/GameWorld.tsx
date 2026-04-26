@@ -110,25 +110,6 @@ export default function GameWorld({ life, events, onEventTrigger, completedEvent
         return { x: newVelX, y: newVelY };
       });
 
-      setPlayerPos((pos) => {
-        const newX = Math.max(PLAYER_SIZE / 2, Math.min(WORLD_WIDTH - PLAYER_SIZE / 2, pos.x + velocity.x));
-        const newY = Math.max(PLAYER_SIZE / 2, Math.min(WORLD_HEIGHT - PLAYER_SIZE / 2, pos.y + velocity.y));
-
-        events.forEach((event) => {
-          if (event.locked || completedEvents.has(event.id)) return;
-
-          const dx = newX - event.x;
-          const dy = newY - event.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < (PLAYER_SIZE + EVENT_SIZE) / 2) {
-            onEventTrigger(event.id);
-          }
-        });
-
-        return { x: newX, y: newY };
-      });
-
       animationRef.current = requestAnimationFrame(gameLoop);
     };
 
@@ -139,13 +120,29 @@ export default function GameWorld({ life, events, onEventTrigger, completedEvent
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [keys, velocity, events, completedEvents, onEventTrigger]);
+  }, [keys]);
 
-  const decorations = Array.from({ length: 12 }, (_, i) => ({
-    emoji: theme.decoration[i % theme.decoration.length],
-    x: (i * 123 + 50) % (WORLD_WIDTH - 40),
-    y: (i * 97 + 50) % (WORLD_HEIGHT - 40),
-  }));
+  useEffect(() => {
+    setPlayerPos((pos) => {
+      const newX = Math.max(PLAYER_SIZE / 2, Math.min(WORLD_WIDTH - PLAYER_SIZE / 2, pos.x + velocity.x));
+      const newY = Math.max(PLAYER_SIZE / 2, Math.min(WORLD_HEIGHT - PLAYER_SIZE / 2, pos.y + velocity.y));
+      return { x: newX, y: newY };
+    });
+  }, [velocity]);
+
+  useEffect(() => {
+    events.forEach((event) => {
+      if (event.locked || completedEvents.has(event.id)) return;
+
+      const dx = playerPos.x - event.x;
+      const dy = playerPos.y - event.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < 50) {
+        onEventTrigger(event.id);
+      }
+    });
+  }, [playerPos, events, completedEvents, onEventTrigger]);
 
   return (
     <div className="relative flex items-center justify-center p-4">
@@ -155,16 +152,6 @@ export default function GameWorld({ life, events, onEventTrigger, completedEvent
         style={{ width: WORLD_WIDTH, height: WORLD_HEIGHT }}
       >
         <div className={`absolute inset-0 ${theme.ground} opacity-40`} />
-
-        {decorations.map((deco, i) => (
-          <div
-            key={i}
-            className="absolute text-2xl opacity-30 pointer-events-none"
-            style={{ left: deco.x, top: deco.y }}
-          >
-            {deco.emoji}
-          </div>
-        ))}
 
         {events.map((event) => {
           const isCompleted = completedEvents.has(event.id);
@@ -199,26 +186,19 @@ export default function GameWorld({ life, events, onEventTrigger, completedEvent
               >
                 {isLocked ? '🔒' : isCompleted ? '✓' : '✨'}
               </div>
-              {event.label && !isCompleted && (
-                <div className="mt-1 px-2 py-1 bg-black/70 rounded text-xs text-white whitespace-nowrap">
-                  {event.label}
-                </div>
-              )}
             </div>
           );
         })}
 
         <div
-          className="absolute transition-all duration-75"
+          className="absolute rounded-full bg-white shadow-lg border-4 border-purple-400"
           style={{
             left: playerPos.x - PLAYER_SIZE / 2,
             top: playerPos.y - PLAYER_SIZE / 2,
             width: PLAYER_SIZE,
             height: PLAYER_SIZE,
           }}
-        >
-          <div className="text-4xl drop-shadow-lg">{life.emoji}</div>
-        </div>
+        />
 
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 px-4 py-2 rounded-lg text-white text-sm">
           Use Arrow Keys or WASD to move

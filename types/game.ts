@@ -1,4 +1,20 @@
-export type MiniGameType = 'reflection' | 'timing' | 'memory' | 'balance' | 'collect';
+export type MiniGameType =
+  | "karma-balance"
+  | "intention-outcome"
+  | "impulse-control"
+  | "breath-focus"
+  | "share-or-hoard"
+  | "fight-or-flee"
+  | "donation-dilemma"
+  | "social-pressure"
+  | "memory-consequences"
+  | "ego-trap"
+  | "micro-life-chaos";
+
+export interface MiniGameProps {
+  onComplete: (result: { success: boolean; consequenceBonus: number; message: string }) => void;
+  scenarioTitle?: string;
+}
 
 export interface Choice {
   text: string;

@@ -30,18 +30,14 @@ export default function Home() {
     return currentLife.scenarios.map((scenario, index) => {
       const angle = (index / currentLife.scenarios.length) * 2 * Math.PI;
       const radius = 200;
-      const x = 400 + Math.cos(angle) * radius;
+      const x = 400 + Math.cos(angle)* radius;
       const y = 300 + Math.sin(angle) * radius;
-
-      const isCompleted = gameState.completedScenarios.includes(scenario.id);
-      const isLocked = index > 0 && !gameState.completedScenarios.includes(currentLife.scenarios[index - 1].id);
 
       return {
         id: scenario.id,
         x,
         y,
-        locked: isLocked,
-        label: `${index + 1}. ${scenario.title}`,
+        locked: false,
       };
     });
   };
@@ -97,7 +93,7 @@ export default function Home() {
       return;
     }
 
-    setGameState({
+    setGameState ({
       currentLifeId: nextLifeId,
       karma: gameState.karma,
       completedScenarios: [],
@@ -125,53 +121,85 @@ export default function Home() {
   if (gamePhase === 'intro') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center p-4">
-        <div className="max-w-3xl bg-black/40 backdrop-blur-xl rounded-3xl p-12 border-2 border-purple-500/30 shadow-2xl">
+        <div className="max-w-4xl bg-black/40 backdrop-blur-xl rounded-3xl p-12 border-2 border-purple-500/30 shadow-2xl">
           <h1 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-purple-200 to-pink-200 mb-6 text-center">
             The Karma Game
           </h1>
           <p className="text-xl text-slate-200 mb-8 text-center leading-relaxed">
             A journey through six lives. Your choices shape your karma. Your karma shapes your rebirth.
           </p>
-          <div className="space-y-4 mb-8 text-slate-300">
-            <p className="text-center text-lg">
-              <strong className="text-purple-300">The Path:</strong>
-            </p>
-            <div className="grid grid-cols-2 gap-4 text-sm">
-              <div className="bg-black/30 p-4 rounded-xl border border-slate-700/30">
-                <div className="text-2xl mb-2">🦠</div>
-                <div className="font-semibold text-slate-200">Micro-organism</div>
-                <div className="text-slate-400 text-xs">Karma: 0-20</div>
+          
+          <div className="space-y-6 mb-8">
+            <div className="bg-purple-900/20 rounded-xl p-6 border border-purple-500/30">
+              <h3 className="text-2xl font-bold text-purple-300 mb-4 text-center">How to Play</h3>
+              <div className="space-y-3 text-slate-200">
+                <p>• <strong className="text-yellow-300">Navigate the World:</strong> Use Arrow Keys or WASD to move your character and encounter scenario events (✨).</p>
+                <p>• <strong className="text-yellow-300">Face Mini-Games:</strong> Each scenario begins with a challenge that tests your focus, discipline, or wisdom. Success improves your circumstances.</p>
+                <p>• <strong className="text-yellow-300">Make Choices:</strong> Read each scenario and choose how to respond. Your intention, action, consequence, and attachment level affect your karma.</p>
+                <p>• <strong className="text-yellow-300">Complete the Life:</strong> Finish all scenarios in a life to be reborn based on your karma score.</p>
               </div>
-              <div className="bg-black/30 p-4 rounded-xl border border-slate-700/30">
-                <div className="text-2xl mb-2">🐍</div>
-                <div className="font-semibold text-slate-200">Snake</div>
-                <div className="text-slate-400 text-xs">Karma: 21-39</div>
+            </div>
+
+            <div className="bg-yellow-900/20 rounded-xl p-6 border border-yellow-500/30">
+              <h3 className="text-2xl font-bold text-yellow-300 mb-4 text-center">How Karma Works</h3>
+              <div className="space-y-3 text-slate-200">
+                <p>• <strong className="text-purple-300">Intention (35%):</strong> Your motivation matters. Selfless intentions earn positive karma.</p>
+                <p>• <strong className="text-purple-300">Action (25%):</strong> What you actually do matters. Compassionate actions earn positive karma.</p>
+                <p>• <strong className="text-purple-300">Consequence (25%):</strong> The outcome of your actions. Good consequences improve karma.</p>
+                <p>• <strong className="text-purple-300">Attachment (15%):</strong> Detachment from outcomes is virtuous. Acting without attachment earns positive karma.</p>
+                <p>• <strong className="text-purple-300">Mini-Game Bonus:</strong> Success in challenges adds a bonus to your consequence score.</p>
               </div>
-              <div className="bg-black/30 p-4 rounded-xl border border-slate-700/30">
-                <div className="text-2xl mb-2">🐕</div>
-                <div className="font-semibold text-slate-200">Dog</div>
-                <div className="text-slate-400 text-xs">Karma: 40-59</div>
+            </div>
+
+            <div className="bg-green-900/20 rounded-xl p-6 border border-green-500/30">
+              <h3 className="text-2xl font-bold text-green-300 mb-4 text-center">How to Win</h3>
+              <div className="space-y-3 text-slate-200">
+                <p>• <strong className="text-yellow-300">Goal:</strong> Achieve enlightenment by reaching the Monk life form with 95+ karma.</p>
+                <p>• <strong className="text-yellow-300">Requirement:</strong> Visit at least 4 different life forms before reaching Monk status.</p>
+                <p>• <strong className="text-yellow-300">Strategy:</strong> Make compassionate choices, act selflessly, accept consequences gracefully, and practice detachment.</p>
+                <p>• <strong className="text-yellow-300">Progression:</strong> Higher karma leads to better rebirths. Low karma may cause you to regress to lower life forms.</p>
               </div>
-              <div className="bg-black/30 p-4 rounded-xl border border-slate-700/30">
-                <div className="text-2xl mb-2">🎓</div>
-                <div className="font-semibold text-slate-200">Poor Human Student</div>
-                <div className="text-slate-400 text-xs">Karma: 60-79</div>
-              </div>
-              <div className="bg-black/30 p-4 rounded-xl border border-slate-700/30">
-                <div className="text-2xl mb-2">💎</div>
-                <div className="font-semibold text-slate-200">Rich Human</div>
-                <div className="text-slate-400 text-xs">Karma: 80-94</div>
-              </div>
-              <div className="bg-black/30 p-4 rounded-xl border border-slate-700/30">
-                <div className="text-2xl mb-2">🧘</div>
-                <div className="font-semibold text-slate-200">Monk / Spiritual Guide</div>
-                <div className="text-slate-400 text-xs">Karma: 95+</div>
+            </div>
+
+            <div className="space-y-4 text-slate-300">
+              <p className="text-center text-lg">
+                <strong className="text-purple-300">The Path of Rebirth:</strong>
+              </p>
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="bg-black/30 p-4 rounded-xl border border-slate-700/30">
+                  <div className="text-2xl mb-2">🦠</div>
+                  <div className="font-semibold text-slate-200">Micro-organism</div>
+                  <div className="text-slate-400 text-xs">Karma: 0-20</div>
+                </div>
+                <div className="bg-black/30 p-4 rounded-xl border border-slate-700/30">
+                  <div className="text-2xl mb-2">🐍</div>
+                  <div className="font-semibold text-slate-200">Snake</div>
+                  <div className="text-slate-400 text-xs">Karma: 21-39</div>
+                </div>
+                <div className="bg-black/30 p-4 rounded-xl border border-slate-700/30">
+                  <div className="text-2xl mb-2">🐕</div>
+                  <div className="font-semibold text-slate-200">Dog</div>
+                  <div className="text-slate-400 text-xs">Karma: 40-59</div>
+                </div>
+                <div className="bg-black/30 p-4 rounded-xl border border-slate-700/30">
+                  <div className="text-2xl mb-2">🎓</div>
+                  <div className="font-semibold text-slate-200">Poor Human Student</div>
+                  <div className="text-slate-400 text-xs">Karma: 60-79</div>
+                </div>
+                <div className="bg-black/30 p-4 rounded-xl border border-slate-700/30">
+                  <div className="text-2xl mb-2">💎</div>
+                  <div className="font-semibold text-slate-200">Rich Human</div>
+                  <div className="text-slate-400 text-xs">Karma: 80-94</div>
+                </div>
+                <div className="bg-black/30 p-4 rounded-xl border border-slate-700/30">
+                  <div className="text-2xl mb-2">🧘</div>
+                  <div className="font-semibold text-slate-200">Monk / Spiritual Guide</div>
+                  <div className="text-slate-400 text-xs">Karma: 95+</div>
+                </div>
               </div>
             </div>
           </div>
-          <p className="text-center text-slate-400 mb-8 italic">
-            Reach enlightenment by visiting 4+ lives and achieving Monk status with 95+ karma.
-          </p>
+          
           <button
             onClick={handleStartGame}
             className="w-full py-5 px-8 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:via-indigo-500 hover:to-blue-500 text-white text-xl font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl"
@@ -204,7 +232,7 @@ export default function Home() {
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-slate-300">Final Karma:</span>
-                  <span className="text-2xl font-bold text-yellow-400">{gameState.karma}</span>
+                  <span className="text-2xl font-bold text-yellow-400">{Math.round(gameState.karma)}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-slate-300">Karma Level:</span>
@@ -282,7 +310,7 @@ export default function Home() {
           <div className="bg-black/30 rounded-xl p-6 border border-purple-500/20 mb-8">
             <p className="text-slate-300">
               <strong className="text-purple-300">Current Karma:</strong>{' '}
-              <span className="text-2xl font-bold text-yellow-400">{gameState.karma}</span>
+              <span className="text-2xl font-bold text-yellow-400">{Math.round(gameState.karma)}</span>
             </p>
           </div>
           <button
@@ -313,7 +341,7 @@ export default function Home() {
             </p>
             <p className="text-xl text-slate-200">
               <strong className="text-yellow-300">Final Karma:</strong>{' '}
-              <span className="text-3xl font-bold text-yellow-400">{gameState.karma}</span>
+              <span className="text-3xl font-bold text-yellow-400">{Math.round(gameState.karma)}</span>
             </p>
             <p className="text-xl text-slate-200">
               <strong className="text-yellow-300">Final Form:</strong> {currentLife?.name}
@@ -350,7 +378,7 @@ export default function Home() {
             <div className="flex gap-6 items-center">
               <div className="text-center">
                 <div className="text-sm text-slate-400">Karma</div>
-                <div className="text-3xl font-bold text-yellow-400">{gameState.karma}</div>
+                <div className="text-3xl font-bold text-yellow-400">{Math.round(gameState.karma)}</div>
                 <div className="text-xs text-purple-300">{getKarmaLevel(gameState.karma)}</div>
               </div>
               <div className="text-center">
