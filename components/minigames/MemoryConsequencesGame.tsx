@@ -5,7 +5,7 @@ import { MiniGameProps } from '@/types/game';
 
 const symbols = ['📚', '🪪', '🍲', '🐍', '💎', '🧘'];
 
-export default function MemoryConsequencesGame({ onComplete }: MiniGameProps) {
+export default function MemoryMatchGame({ onComplete }: MiniGameProps) {
   const [phase, setPhase] = useState<'showing' | 'recall'>('showing');
   const [sequence, setSequence] = useState<string[]>([]);
   const [currentShowIndex, setCurrentShowIndex] = useState(0);
@@ -65,7 +65,7 @@ export default function MemoryConsequencesGame({ onComplete }: MiniGameProps) {
   return (
     <div className="space-y-6">
       <div className="text-center">
-        <h3 className="text-2xl font-bold text-purple-200 mb-2">Memory of Consequences</h3>
+        <h3 className="text-2xl font-bold text-purple-200 mb-2">Memory Match</h3>
         <p className="text-slate-300 text-sm">
           {phase === 'showing' ? 'Watch the sequence carefully' : 'Repeat the sequence'}
         </p>

@@ -1,15 +1,15 @@
 export type MiniGameType =
-  | "karma-balance"
-  | "intention-outcome"
-  | "impulse-control"
-  | "breath-focus"
-  | "share-or-hoard"
-  | "fight-or-flee"
-  | "donation-dilemma"
-  | "social-pressure"
-  | "memory-consequences"
-  | "ego-trap"
-  | "micro-life-chaos";
+  | "memory-match"
+  | "frogger-crossing"
+  | "maze-escape"
+  | "quick-dodge"
+  | "reaction-bar"
+  | "simon-says"
+  | "coin-collection"
+  | "lockpick"
+  | "tile-pattern"
+  | "crate-push"
+  | "light-beam";
 
 export interface MiniGameProps {
   onComplete: (result: { success: boolean; consequenceBonus: number; message: string }) => void;

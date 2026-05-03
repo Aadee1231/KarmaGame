@@ -14,7 +14,7 @@ export default function Home() {
   const [gameState, setGameState] = useState<GameState>({
     currentLifeId: 'poor_student',
     karma: 60,
-    completedScenarios: [],
+    completedScenarios: [], 
     flags: [],
     visitedLives: [],
     choicePatterns: { compassionate: 0, selfish: 0, detached: 0, attached: 0 },
@@ -362,54 +362,23 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-indigo-950 p-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="bg-black/40 backdrop-blur-xl rounded-2xl p-6 mb-4 border-2 border-purple-500/30 shadow-xl">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-6">
-              <div className="text-5xl">{currentLife?.emoji}</div>
-              <div>
-                <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-purple-200">
-                  {currentLife?.name}
-                </h2>
-                <p className="text-slate-400 text-sm">{currentLife?.description}</p>
-              </div>
-            </div>
-            <div className="flex gap-6 items-center">
-              <div className="text-center">
-                <div className="text-sm text-slate-400">Karma</div>
-                <div className="text-3xl font-bold text-yellow-400">{Math.round(gameState.karma)}</div>
-                <div className="text-xs text-purple-300">{getKarmaLevel(gameState.karma)}</div>
-              </div>
-              <div className="text-center">
-                <div className="text-sm text-slate-400">Progress</div>
-                <div className="text-2xl font-bold text-purple-300">
-                  {gameState.completedScenarios.length} / {currentLife?.scenarios.length || 0}
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-sm text-slate-400">Lives Visited</div>
-                <div className="text-2xl font-bold text-indigo-300">{gameState.visitedLives.length}</div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-indigo-950 flex items-center justify-center p-4">
+      <GameWorld
+        life={currentLife!}
+        events={events}
+        onEventTrigger={handleEventTrigger}
+        completedEvents={completedEvents}
+        karma={gameState.karma}
+        visitedLives={gameState.visitedLives}
+      />
 
-        <GameWorld
-          life={currentLife!}
-          events={events}
-          onEventTrigger={handleEventTrigger}
-          completedEvents={completedEvents}
+      {currentScenario && (
+        <EventModal
+          scenario={currentScenario}
+          onComplete={handleEventComplete}
+          onClose={() => setCurrentEventId(null)}
         />
-
-        {currentScenario && (
-          <EventModal
-            scenario={currentScenario}
-            onComplete={handleEventComplete}
-            onClose={() => setCurrentEventId(null)}
-          />
-        )}
-      </div>
+      )}
     </div>
   );
 }

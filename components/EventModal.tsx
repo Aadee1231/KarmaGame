@@ -48,75 +48,75 @@ export default function EventModal({ scenario, onComplete, onClose }: EventModal
 
   const getMiniGameIntro = () => {
     const intros: Record<string, { title: string; objective: string; rules: string; relevance: string }> = {
-      'karma-balance': {
-        title: 'Balance Test',
-        objective: 'Keep the marker centered for 60 seconds',
-        rules: 'The marker drifts naturally. Use A/D or Arrow keys to nudge it back to center. You have 2 minutes total.',
-        relevance: 'Life constantly pulls you off balance. Can you maintain equilibrium under pressure?'
-      },
-      'intention-outcome': {
-        title: 'Intention vs Outcome',
-        objective: 'Correctly classify 3 out of 5 scenarios',
-        rules: 'Read each scenario and decide if it\'s driven more by Intention or Outcome. You have 30 seconds per card.',
-        relevance: 'Karma weighs both why you act and what results. Can you distinguish them?'
-      },
-      'impulse-control': {
-        title: 'Impulse Control',
-        objective: 'Resist clicking the tempting button for 90 seconds',
-        rules: 'A glowing button will appear and move around. Do NOT click it until the timer ends. Clicking early = failure.',
-        relevance: 'Desire and temptation test your discipline. Can you wait when everything urges you to act?'
-      },
-      'breath-focus': {
-        title: 'Breath & Presence',
-        objective: 'Press Space at 12 breath peaks within 2 minutes',
-        rules: 'Watch the breathing circle expand (inhale) and contract (exhale). Press Space at the peak of each phase.',
-        relevance: 'Mindfulness requires presence. Can you stay synchronized with the rhythm of life?'
-      },
-      'share-or-hoard': {
-        title: 'Share or Hoard',
-        objective: 'Collect 10+ food items and share at least 4 times',
-        rules: 'Food appears randomly. Click to collect. Press S to share with others. Balance survival with generosity over 2 minutes.',
-        relevance: 'Resources are limited. Do you hoard for security or share despite scarcity?'
-      },
-      'fight-or-flee': {
-        title: 'Fight or Flee',
-        objective: 'Respond correctly to 5 out of 8 threats',
-        rules: 'Threats appear with context. Press Space (confront/warn) or S/Down (retreat). You have 20 seconds per threat.',
-        relevance: 'Not all conflicts require confrontation. Can you discern when to stand firm and when to yield?'
-      },
-      'donation-dilemma': {
-        title: 'Donation Dilemma',
-        objective: 'Allocate 100 coins: help impact ≥50, ego meter ≤35',
-        rules: 'You have 3 minutes to distribute coins between Public Donation, Private Help, and Self Comfort. Balance impact and humility.',
-        relevance: 'Giving can feed the ego or serve others. What motivates your generosity?'
-      },
-      'social-pressure': {
-        title: 'Social Pressure',
-        objective: 'Make the right choice in 5 out of 8 situations',
-        rules: 'Face social scenarios where the crowd has opinions. Choose to Speak or Stay Silent. You have 20 seconds per situation.',
-        relevance: 'The crowd\'s voice is loud. Can you act with integrity when it conflicts with popularity?'
-      },
-      'memory-consequences': {
-        title: 'Memory of Consequences',
+      'memory-match': {
+        title: 'Memory Match',
         objective: 'Remember and repeat a 7-symbol sequence',
         rules: 'Watch symbols appear one by one (4s each). Then click them in the correct order.',
         relevance: 'Actions create chains of consequences. Can you remember the pattern and not repeat mistakes?'
       },
-      'ego-trap': {
-        title: 'Ego Trap',
-        objective: 'Score ≥15 points, click ≤5 ego bubbles in 90 seconds',
-        rules: 'Click blue/green compassion bubbles (+1). Avoid yellow/orange ego bubbles (-2). They rise from bottom.',
-        relevance: 'Even spiritual practice can inflate the ego. Can you pursue growth without self-importance?'
+      'frogger-crossing': {
+        title: 'Frogger Crossing',
+        objective: 'Survive 20 seconds without collision',
+        rules: 'Use ↑↓ or W/S to move between lanes. Avoid moving obstacles. Timing is everything.',
+        relevance: 'Life throws obstacles at you constantly. Can you navigate chaos with patience?'
       },
-      'micro-life-chaos': {
-        title: 'Micro-Life Chaos',
-        objective: 'Survive as a microorganism for 60 seconds',
-        rules: 'Use WASD or arrows to move. Avoid hazards (soap, sun, shoes). You slip and slide. Good luck.',
-        relevance: 'Sometimes you have almost no control. Can you accept chaos and still try your best?'
+      'maze-escape': {
+        title: 'Maze Escape',
+        objective: 'Reach the exit before time runs out',
+        rules: 'Use Arrow Keys or WASD to navigate. Find the door within 45 seconds.',
+        relevance: 'Sometimes the path is unclear. Persistence reveals the way forward.'
+      },
+      'quick-dodge': {
+        title: 'Quick Dodge',
+        objective: 'Survive 10 seconds without getting hit',
+        rules: 'Use ←→ or A/D to dodge falling hazards. Stay alert and keep moving.',
+        relevance: 'Danger comes from above. Awareness and quick reflexes protect you.'
+      },
+      'reaction-bar': {
+        title: 'Reaction Bar',
+        objective: 'Stop in the green zone 3 out of 5 times',
+        rules: 'Press Space or Enter to stop the moving bar. Hit the green zone for success.',
+        relevance: 'Timing is crucial in life. Can you act at the right moment?'
+      },
+      'simon-says': {
+        title: 'Simon Says',
+        objective: 'Repeat the pattern for 7 rounds',
+        rules: 'Watch the tiles flash, then click them in the same order. Pattern grows each round.',
+        relevance: 'Attention and memory guide right action. Can you follow the pattern?'
+      },
+      'coin-collection': {
+        title: 'Coin Collection',
+        objective: 'Collect 40+ coins in 45 seconds',
+        rules: 'Use Arrow Keys or WASD to move. Gather coins but avoid bombs.',
+        relevance: 'Resources are limited. Can you gather what you need while avoiding danger?'
+      },
+      'lockpick': {
+        title: 'Lockpick Timing',
+        objective: 'Pick 3 locks successfully',
+        rules: 'Press Space or Enter to stop the needle in the green zone. Each round gets faster.',
+        relevance: 'Precision and timing unlock doors. Can you master the moment?'
+      },
+      'tile-pattern': {
+        title: 'Tile Pattern Puzzle',
+        objective: 'Step on tiles in the correct order',
+        rules: 'Watch which tiles flash, then click them in the same sequence.',
+        relevance: 'The path is shown briefly. Can you remember and follow it?'
+      },
+      'crate-push': {
+        title: 'Crate Push Puzzle',
+        objective: 'Push all crates onto the switches',
+        rules: 'Use Arrow Keys or WASD to move and push crates. Plan your moves carefully.',
+        relevance: 'Some problems require strategy, not force. Can you think ahead?'
+      },
+      'light-beam': {
+        title: 'Light Beam Reflector',
+        objective: 'Rotate mirrors so light reaches the target',
+        rules: 'Click mirrors to rotate them 45°. Align them to guide the beam.',
+        relevance: 'Clarity comes from proper alignment. Can you direct the light?'
       }
     };
 
-    return intros[scenario.miniGameType] || intros['karma-balance'];
+    return intros[scenario.miniGameType] || intros['memory-match'];
   };
 
   const miniGameIntro = getMiniGameIntro();
@@ -260,11 +260,8 @@ export default function EventModal({ scenario, onComplete, onClose }: EventModal
                     onClick={() => handleChoiceSelect(choice)}
                     className="w-full p-6 bg-gradient-to-r from-slate-800/70 to-purple-800/70 hover:from-slate-700/90 hover:to-purple-700/90 border-2 border-purple-500/30 hover:border-purple-400/60 rounded-xl text-left transition-all duration-300 transform hover:scale-102 hover:shadow-xl group"
                   >
-                    <p className="text-lg font-semibold text-slate-100 group-hover:text-white mb-2">
+                    <p className="text-lg font-semibold text-slate-100 group-hover:text-white">
                       {choice.text}
-                    </p>
-                    <p className="text-sm text-slate-400 italic">
-                      {choice.intention}
                     </p>
                   </button>
                 ))}
