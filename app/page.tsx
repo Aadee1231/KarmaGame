@@ -12,8 +12,8 @@ type GamePhase = 'intro' | 'playing' | 'life_complete' | 'rebirth' | 'true_endin
 export default function Home() {
   const [gamePhase, setGamePhase] = useState<GamePhase>('intro');
   const [gameState, setGameState] = useState<GameState>({
-    currentLifeId: 'poor_student',
-    karma: 60,
+    currentLifeId: 'microorganism',
+    karma: 0,
     completedScenarios: [], 
     flags: [],
     visitedLives: [],
