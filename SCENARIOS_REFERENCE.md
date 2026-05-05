@@ -1,6 +1,23 @@
 # Karma Game - Complete Scenarios Reference
 
-This document breaks down all scenarios and choices for each character in the game, including karma score breakdowns.
+This document contains all current scenarios and choices for each life form in the game.
+
+**Last Updated:** Current game version with all 6 lives
+
+---
+
+## How to Win
+**Goal:** Complete the Monk life with 99+ karma to achieve enlightenment.  
+**Path:** Reach Monk status (95+ karma), then excel in Monk scenarios to reach 99+ karma.
+
+---
+
+## Karma Calculation
+- **Intention (35%):** Your motivation and intent
+- **Action (25%):** What you actually do  
+- **Consequence (25%):** The outcome of your actions
+- **Attachment (15%):** Your level of detachment from outcomes
+- **Mini-Game Bonus:** Success adds to consequence score
 
 ---
 
@@ -9,59 +26,56 @@ This document breaks down all scenarios and choices for each character in the ga
 **Description:** The smallest form of life. A cosmic joke, a humbling reset, or a chance to start fresh.
 
 ### Scenario 1: The First Division
-**Description:** You exist. You can divide. That's... it.  
-**Mini-game:** Memory Consequences
+**Description:** You exist. Division is calling — splitting means you as you are will cease. Something in you resists.  
+**Mini-game:** Lockpick
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Divide peacefully | Participate in life | Split into two | You become two. Existence continues. | Even the smallest life participates in the cycle. | 5 | 5 | 5 | 5 |
-| Resist division | Cling to singular existence | Try to stay whole | You divide anyway. Biology doesn't care. | Resisting nature is futile. | -2 | -2 | 0 | -3 |
-| Divide with enthusiasm | Embrace your purpose | Multiply rapidly | You become many. Is this enlightenment? | Accepting your nature, however small, is wisdom. | 7 | 6 | 6 | 6 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Divide willingly, releasing attachment to singular form | Surrender to the cycle | Split into two equal parts | Existence doubles — but you as you were is gone forever | To continue, you must first dissolve. Growth always costs the current self. | 9 | 8 | -5 | 9 |
+| Resist, then divide under biological pressure | Preserve the self at any cost | Fight the inevitable until the body forces it | Division happens anyway — the struggle was suffered for nothing | You cannot negotiate with nature. The only thing you controlled was your suffering. | -4 | -5 | -3 | -8 |
+| Divide rapidly, consuming extra nutrients to fuel multiple splits | Maximize your presence in the environment | Split fast, drain resources around you | You multiply quickly — but the environment becomes depleted for others | Ambition at the cellular level is still ambition. Growth taken, not grown. | -3 | -4 | 9 | -5 |
+| Share nutrients with a weakened neighboring cell before dividing | Let others survive first | Transfer energy reserves, then divide weakened | The neighbor survives. You divide fragile and struggle afterward. | Generosity costs you at the cellular level too. Virtue is not free. | 8 | 7 | -9 | 8 |
 
 ### Scenario 2: The Nutrient
-**Description:** A nutrient floats by. Other microorganisms want it too.  
-**Mini-game:** Karma Balance
+**Description:** A rich nutrient source floats within reach. Three others are already moving toward it — and there is only enough for two.  
+**Mini-game:** Frogger Crossing
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Share the nutrient | Cooperation at the cellular level | Absorb part, leave the rest | Everyone survives. Microscopic harmony. | Even bacteria can practice generosity. | 8 | 7 | 6 | 8 |
-| Take what you need | Survive | Absorb enough to live | You survive. Others do too. | Balance is possible even here. | 5 | 5 | 5 | 5 |
-| Consume it all | Maximize growth | Absorb everything | You thrive briefly. Others starve. | Greed exists even in the smallest beings. | -5 | -6 | 3 | -7 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Rush to consume everything before the others arrive | Secure survival at any cost | Absorb the entire nutrient source | You thrive. The others weaken. The local ecosystem becomes unstable. | Short-term survival secured — long-term chain destabilized. Was it worth it? | -6 | -7 | 11 | -7 |
+| Absorb only your proportional share | Take what is fair and no more | Consume one quarter, leave the rest | All survive. The ecosystem holds. You are satisfied but not strong. | Fairness requires restraint. Restraint requires awareness. | 7 | 7 | 4 | 6 |
+| Leave the nutrient entirely and drift away hungry | Put others before your own survival | Move away, take nothing | The others flourish. You weaken significantly and may not survive. | Self-sacrifice is noble — but it also costs you everything. Is that wisdom or waste? | 9 | 8 | -13 | 10 |
+| Take more than your share but leave something behind | Secure survival with a buffer, rationalized as partial generosity | Absorb half the nutrient | You thrive. One other survives. Two others starve. | The half you left feels generous. The half you took still cost two lives. | 2 | 1 | 5 | -3 |
 
 ### Scenario 3: The Antibody
-**Description:** An immune cell approaches. You're about to be destroyed.  
-**Mini-game:** Memory Consequences
+**Description:** An immune cell has locked onto you. You cannot outrun it. You have seconds left.  
+**Mini-game:** Lockpick
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Accept your role in the cycle | Surrender to impermanence | Float calmly | You're destroyed peacefully | Accepting death without fear, even as a microbe, is enlightenment. | 10 | 9 | -10 | 10 |
-| Try to flee | Survive | Wiggle away frantically | You're caught anyway | Clinging to life creates suffering. | -2 | -3 | -10 | -4 |
-| Release toxins in defiance | Fight back | Harm the immune cell | You both die | Violence, even in self-defense, perpetuates suffering. | -6 | -7 | -10 | -8 |
-| Do what seems most practical | Be pragmatic | Choose the logical path | It works but feels incomplete | Logic alone misses the heart. | 4 | 5 | 4 | 1 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Accept destruction with complete stillness | Surrender without resistance | Float calmly as the immune cell closes in | You are destroyed peacefully. The body is protected. | Acceptance of death is the hardest act. You leave nothing harmful behind. | 10 | 9 | -15 | 10 |
+| Flee into a crevice, buying moments but not escaping | Survive a little longer out of fear | Move frantically, exhaust yourself | You delay destruction by seconds. Fear fills every one of them. | Clinging to life can make its ending harder. You extended the suffering, not the life. | -1 | -2 | -15 | -5 |
 
 ### Scenario 4: The Cosmic Joke
-**Description:** You realize you're a microorganism. This is absurd.  
-**Mini-game:** Impulse Control
+**Description:** Somehow, impossibly, you are aware. You are a microorganism. You will be gone within hours. This is your entire existence.  
+**Mini-game:** Light Beam
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Laugh at the absurdity | Find humor in humility | Embrace the cosmic joke | Enlightenment through absurdity | Sometimes the path to wisdom is through laughter at yourself. | 10 | 10 | 8 | 10 |
-| Feel despair | Mourn your fall | Exist in misery | Suffering continues | Attachment to past forms creates present suffering. | -5 | -5 | -3 | -7 |
-| Seek meaning in simplicity | Find purpose | Exist mindfully | Peace in the smallest existence | Meaning exists at every scale. | 9 | 8 | 7 | 9 |
-| Ask yourself what feels right | Seek inner wisdom | Listen to your conscience | You feel aligned with your values | Inner alignment creates peace. | 6 | 5 | 3 | 6 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Despair — rage at the insignificance of it all | Mourn what you are | Exist in concentrated grief | Suffering deepens. The universe does not notice. Time is wasted. | Awareness without acceptance is a prison built from the inside. | -5 | -5 | -4 | -8 |
+| Find meaning anyway — even here, even this small | Create purpose in the smallest possible life | Commit to this moment fully | Peace arrives — but your choices remain microscopic in impact. | Meaning is not granted by scale. But its reach is. | 8 | 7 | 3 | 7 |
+| Try to signal other cells — warn them of their nature | Share the awareness with others who cannot receive it | Release chemical signals in desperate patterns | Nothing responds. You spend your final energy on an untranslatable message. | Compassion is not always translatable. Some truths must be discovered, not delivered. | 7 | 5 | -8 | 5 |
 
 ### Scenario 5: The Rebirth
-**Description:** Your time as a microorganism ends. What did you learn?  
-**Mini-game:** Impulse Control
+**Description:** Your cellular life is ending. Something waits beyond. You have one final moment of awareness before the transition.  
+**Mini-game:** Light Beam
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Humility and acceptance | Embrace the lesson | Carry wisdom forward | You're ready to rise again | Even the lowest form can teach the highest lessons. | 10 | 10 | 10 | 10 |
-| Resentment and desire to climb | Escape this form | Cling to ambition | The lesson is incomplete | Wanting to be elsewhere prevents being here. | -3 | -4 | 2 | -6 |
-| Nothing, just survival | Endure | Exist without growth | The cycle continues unchanged | Life without awareness is wasted opportunity. | 0 | 0 | 0 | 0 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Accept the transition with full, unafraid awareness | Meet the end with presence rather than fear | Let go of form completely | The cycle turns cleanly. What you were is released without distortion. | To end without grasping is the deepest form of freedom. The next form inherits nothing heavy. | 10 | 9 | 8 | 10 |
+| Cling — try to encode yourself into whatever comes next | Survive beyond your form | Hold tightly to the pattern you are | The clinging distorts the transition. What follows carries the weight. | What you refuse to release becomes a burden for what follows. | -5 | -4 | -7 | -9 |
+| Reflect carefully on what you observed — then release | Extract wisdom before transitioning | Pause, remember, then let go | The transition carries more intention. But reflection delays the release. | Reflection without attachment is how observation becomes wisdom. | 8 | 7 | 4 | 7 |
+| Resist with everything — fight the end completely | Survive at any cost, even beyond possibility | Burn every last reserve fighting the inevitable | You exhaust yourself in fear. The transition happens anyway, but harder. | Fear of death, held tightly, travels with you. The next life begins already clenched. | -3 | -4 | -6 | -8 |
 
 ---
 
@@ -70,114 +84,101 @@ This document breaks down all scenarios and choices for each character in the ga
 **Description:** A creature of survival, instinct, and transformation.
 
 ### Scenario 1: The First Hunger
-**Description:** You emerge from your hiding place, hungry. A small mouse is nearby.  
-**Mini-game:** Fight or Flee
+**Description:** You emerge from your hiding place, cold and starving. A healthy mouse is nearby — but so is a sick, slow one on the edge of the clearing.  
+**Mini-game:** Quick Dodge
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Hunt only what you need | Survive without excess | Strike swiftly, eat, rest | You're satisfied, the ecosystem remains balanced | Taking only what is needed is harmony. | 6 | 5 | 5 | 6 |
-| Hunt but hesitate, feeling conflicted | Question your nature | Approach slowly, uncertain | The mouse escapes, you remain hungry | Awareness of suffering is the seed of compassion. | 4 | 2 | -3 | 3 |
-| Strike with aggression and dominance | Assert your power | Attack violently | You feed but the kill was unnecessarily brutal | Cruelty beyond necessity creates negative karma. | -4 | -6 | 3 | -5 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Hunt the healthy mouse — a clean, swift kill | Survive with efficiency | Strike precisely and eat | You are fed. A healthy creature is gone from the ecosystem. | Clean death is still death. Does the efficiency make it more right? | 6 | 6 | -3 | 6 |
+| Hesitate too long out of conflicted awareness | Question whether you should kill at all | Approach slowly, second-guessing yourself | Both mice escape. You remain hungry and weaker. | Awareness without action is not compassion — it is paralysis. | 4 | 1 | -8 | 3 |
+| Strike violently — more force than needed, displaying dominance | Assert power beyond necessity | Attack with aggression and display | You eat. The kill was brutal and left you exposed. | What was the extra violence for? You. Not survival. | -5 | -7 | 8 | -6 |
+| Fast deliberately — endure hunger without taking life today | Practice restraint | Withdraw without hunting | You grow weak. Both mice survive. The hunger deepens. | Noble restraint, or dangerous idealism? What is a snake without its nature? | 9 | 7 | -11 | 8 |
 
 ### Scenario 2: The Warm Rock
-**Description:** Another snake is basking on the best sunning rock. You need warmth.  
-**Mini-game:** Donation Dilemma
+**Description:** You are cold and need the sun. Another snake already occupies the best basking rock — and they are larger than you.  
+**Mini-game:** Frogger Crossing
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Find another spot | Avoid conflict | Slither to a less ideal location | You're colder but peaceful | Yielding can be strength, not weakness. | 6 | 5 | -2 | 6 |
-| Share the rock | Coexist | Approach calmly, rest nearby | Both of you warm up, no conflict | Cooperation transcends competition. | 8 | 7 | 5 | 7 |
-| Hiss and claim the rock | Take what you want | Aggressive display | You get the rock but create an enemy | Dominance through fear is temporary power. | -5 | -6 | 2 | -7 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Find another spot, even if it is inadequate | Avoid conflict at personal cost | Settle for a colder, shaded rock | No conflict. You warm slowly. They never even noticed you. | Peace is easy when the cost is yours alone. | 7 | 6 | -6 | 7 |
+| Approach and attempt to share the rock | Coexist rather than compete | Move close slowly, settle at the edge | They allow it, but tension remains. You both warm partially. | Cooperation is possible — but it costs ease, not effort. | 8 | 7 | 2 | 6 |
+| Display aggressively until they leave | Claim what you need | Hiss, spread hood, hold position | They flee. You are warm. You have an enemy now. | You won the rock. What did winning cost you? | -5 | -6 | 8 | -7 |
+| Wait at a distance until they leave naturally | Patience over conflict or sacrifice | Coil nearby and wait | They leave eventually. You warmed slowly the whole time. The sun is already lower. | Patience can be wisdom — or avoidance dressed in virtue. | 5 | 4 | -3 | 5 |
 
 ### Scenario 3: The Human Encounter
-**Description:** A human hiker nearly steps on you. They freeze in fear.  
-**Mini-game:** Fight or Flee
+**Description:** A human hiker nearly steps on you. They freeze. You are cornered — retreat is possible but slow. They could grab a rock.  
+**Mini-game:** Quick Dodge
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Retreat quietly | Avoid harm to both | Slither away into brush | Both of you are safe, fear dissolves | Choosing peace over reaction is wisdom. | 8 | 8 | 7 | 8 |
-| Stay still and calm | Show you're not a threat | Remain motionless | They carefully step around you | Stillness can communicate more than action. | 6 | 6 | 5 | 5 |
-| Hiss and strike defensively | Protect yourself through fear | Aggressive warning | They panic and might harm you, or you bite them | Fear begets fear, violence begets violence. | -6 | -7 | -5 | -7 |
-| Do what seems most practical | Be pragmatic | Choose the logical path | It works but feels incomplete | Logic alone misses the heart. | 4 | 5 | 4 | 1 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Retreat slowly and deliberately into the brush | Remove the threat by removing yourself | Slither away without display | You leave your basking spot. They walk away shaken but unharmed. | De-escalation always costs you something. Here it cost only comfort. | 8 | 8 | -3 | 7 |
+| Hold completely still — become invisible through stillness | Avoid escalation without retreat | Freeze, flatten, do not react | They eventually move around you, wary. You keep your spot. | Stillness is not passivity. It is a choice that requires will. | 6 | 6 | 4 | 5 |
+| Hiss loudly as a warning — no strike | Communicate threat without acting on it | Open mouth, display, do not advance | They back up quickly. Some people respond to warnings with rocks. | Warning is honest. But their fear does not know the difference. | 3 | 2 | -4 | 2 |
+| Strike a warning bite — no venom, just contact | Force them to move immediately | Strike the boot and withdraw | They panic. You may have just ensured they come back to kill you. | A defensive act can create the very threat it was meant to stop. | -4 | -6 | -9 | -6 |
 
 ### Scenario 4: The Shedding
-**Description:** Your skin is ready to shed. The process is uncomfortable and you're vulnerable.  
-**Mini-game:** Social Pressure
+**Description:** Your old skin is tight and clouded. You need to shed — but you are in open territory. Hiding means going deeper and losing access to food.  
+**Mini-game:** Light Beam
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Find a safe place and embrace the transformation | Accept change | Hide and complete the shed peacefully | You emerge renewed and stronger | Transformation requires vulnerability and patience. | 9 | 8 | 6 | 8 |
-| Rush the process to return to hunting | Minimize downtime | Force the shed quickly | Incomplete shed, discomfort lingers | Rushing natural processes creates suffering. | -2 | -3 | -2 | -3 |
-| Resist and fear the change | Cling to the familiar | Try to keep old skin | You become sick, growth is stunted | Resistance to change is resistance to life. | -5 | -6 | -5 | -7 |
-| Ask yourself what feels right | Seek inner wisdom | Listen to your conscience | You feel aligned with your values | Inner alignment creates peace. | 6 | 5 | 3 | 6 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Move deep into cover and complete the shed patiently | Accept vulnerability in exchange for renewal | Find hidden shelter and take the time needed | You emerge renewed — but weak from not eating for days. | Every transformation requires a period of being exposed and hungry. | 9 | 8 | -5 | 8 |
+| Begin the shed here, in open territory, to maintain access to prey | Minimize disruption to your survival needs | Start shedding in an exposed spot | You stay near food but are dangerously exposed. You lose a day to fear. | Efficiency and safety rarely coexist during transformation. | 4 | 3 | -7 | 3 |
+| Force the shed faster by rubbing against rough surfaces aggressively | Get it over with — return to function | Rush the shed through friction | Incomplete shed. Skin tears. Infection risk rises. | Forcing a natural process does not accelerate growth — it damages it. | -2 | -4 | -8 | -4 |
+| Resist — avoid shedding as long as possible | Avoid the discomfort and vulnerability of change | Continue moving and hunting with impaired vision | Hunting becomes nearly impossible. The old skin becomes painful. | Resistance to change is not protection. It is just delayed suffering. | -5 | -6 | -9 | -7 |
 
 ### Scenario 5: The Trapped Frog
-**Description:** You find a frog stuck in a fence. Easy prey, but it's suffering.  
-**Mini-game:** Memory Consequences
+**Description:** A frog is caught in wire fencing, exhausted and injured. It cannot escape. You are hungry.  
+**Mini-game:** Memory Match
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Leave it alone | Recognize its suffering | Slither past | You're hungry but avoided exploiting helplessness | Compassion for the vulnerable elevates the spirit. | 8 | 7 | -3 | 9 |
-| Eat it quickly to end its suffering | Mercy through nature | Strike and consume | You feed, the frog's suffering ends | Is this mercy or rationalization? | 2 | 1 | 2 | 0 |
-| Toy with it before eating | Enjoy your power | Prolong its fear | You feed but the cruelty was unnecessary | Sadism, even in nature, darkens karma. | -8 | -9 | 2 | -9 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Leave it — do not exploit helplessness | Refuse to take advantage of the defenseless | Slither past without engaging | You are hungry. The frog dies slowly over hours, alone. | Nonviolence can allow suffering to continue. Was leaving it kindness? | 7 | 6 | -7 | 8 |
+| Toy with it before eating — prolong the moment of power | Enjoy the dominance | Circle it, strike without finishing, withdraw | You eventually eat. The cruelty was unnecessary. The suffering was extended. | Power without restraint reveals what you become when no one is watching. | -8 | -9 | 3 | -9 |
 
-### Scenario 6: The Nest of Eggs
-**Description:** You find a bird's nest with eggs. The mother bird is away.  
-**Mini-game:** Fight or Flee
+### Scenario 6: The Rival
+**Description:** A larger snake has entered your territory and challenges you directly. You cannot outmatch them in size.  
+**Mini-game:** Frogger Crossing
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Leave the nest undisturbed | Respect new life | Slither away | The eggs hatch, you remain hungry | Protecting potential life is sacred. | 9 | 8 | -3 | 9 |
-| Take one egg only | Survive without destroying all | Consume a single egg | You eat, some birds still hatch | Moderation in taking is a form of respect. | 3 | 2 | 1 | 2 |
-| Consume all the eggs | Maximize your gain | Eat everything | You're full, a family line ends | Greed destroys more than it feeds. | -6 | -7 | 3 | -8 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Display without fighting — hold your ground through presence alone | Communicate strength without violence | Raise your body, hold eye contact, do not advance | They back down after a tense standoff. You are shaken but unharmed. | Strength that does not strike is still strength — and harder to maintain. | 7 | 6 | 4 | 6 |
+| Retreat and cede the territory | Preserve yourself over place | Withdraw without display | You lose hunting grounds you built. Starting over costs weeks. | The ego says retreat is failure. The body says otherwise. | 6 | 5 | -7 | 7 |
+| Attack despite the size disadvantage | Defend what is yours regardless of cost | Strike first and hard | You wound them — but take serious damage. Both limp away. | Winning and surviving are not the same thing. | -4 | -7 | -5 | -7 |
+| Attempt to propose a boundary — display at the edge and wait | Find a third option between fight and surrender | Mark the boundary and hold without advancing | They ignore the signal and advance. You must choose quickly. | Not every conflict is open to negotiation. Recognizing that matters. | 8 | 5 | -3 | 5 |
 
-### Scenario 7: The Rival
-**Description:** Another snake challenges you for territory. You could fight, flee, or negotiate.  
-**Mini-game:** Donation Dilemma
+### Scenario 7: The Poison Within
+**Description:** A large animal cornered you accidentally. It is panicked, not aggressive — but it could crush you.  
+**Mini-game:** Reaction Bar
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Display but don't fight | Show strength without violence | Posture defensively, hold ground | They back down, no one is hurt | True strength doesn't require bloodshed. | 7 | 6 | 5 | 6 |
-| Retreat to new territory | Choose peace over pride | Slither away | You lose this spot but avoid conflict | Ego is not worth violence. | 6 | 5 | -1 | 7 |
-| Attack to dominate | Defend your territory violently | Strike to injure | You win but both are wounded | Victory through violence is hollow. | -5 | -7 | 1 | -7 |
-| Do what seems most practical | Be pragmatic | Choose the logical path | It works but feels incomplete | Logic alone misses the heart. | 4 | 5 | 4 | 1 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Warning strike with no venom — contact only | Communicate danger without causing lasting harm | Dry bite on the leg, then withdraw | They react and flee. You conserve venom. They carry fear of snakes. | Restraint is not weakness — but the fear you planted will outlive this moment. | 8 | 8 | 3 | 7 |
+| Inject minimal venom — enough to cause pain, not death | Proportional defense | Controlled bite with partial venom | They retreat in real pain. The wound may fester. You feel defenseless. | Proportional force still causes harm. Proportional is not harmless. | 4 | 3 | -2 | 3 |
+| Full envenomation — eliminate the threat completely | End this permanently | Maximum venom injection | They die slowly over hours. You are defenseless for days. Scavengers circle both of you. | Maximum force left you vulnerable. The threat is gone and so is your protection. | -6 | -8 | -8 | -7 |
+| Flee rather than engage — spend energy on escape, not defense | Avoid harm entirely by removing yourself | Slither hard and fast in the other direction | You exhaust yourself. You escape. You lose territory and meal. | Sometimes the bravest act is running. Sometimes it is just expensive. | 7 | 6 | -6 | 7 |
 
-### Scenario 8: The Poison Within
-**Description:** You have venom. A creature threatens you. How you use this power matters.  
-**Mini-game:** Ego Trap
+### Scenario 8: The Cold Night
+**Description:** Temperatures are falling fast. You find a small burrow — occupied by a mouse family. Without shelter, you may not survive the night.  
+**Mini-game:** Light Beam
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Warning strike without venom | Defend without killing | Dry bite to scare | They flee, you conserve your venom | Restraint in power is enlightened. | 9 | 8 | 6 | 8 |
-| Inject minimal venom | Defend proportionally | Controlled bite | They retreat in pain but survive | Measured response to threat is just. | 4 | 3 | 2 | 3 |
-| Full envenomation | Eliminate the threat completely | Inject all venom | They die slowly, you're defenseless for days | Excessive force creates suffering and vulnerability. | -6 | -8 | -3 | -7 |
-| Ask yourself what feels right | Seek inner wisdom | Listen to your conscience | You feel aligned with your values | Inner alignment creates peace. | 6 | 5 | 3 | 6 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Search for another shelter, even if inadequate | Do not displace others even at serious risk to yourself | Move on into the cold, searching | You find minimal cover. You barely survive. The mouse family never knew. | The noblest sacrifices are the ones no one witnesses. | 9 | 8 | -12 | 9 |
+| Enter the burrow slowly — coexist if they allow it | Survive without forcing them out | Enter quietly, settle in a corner, offer no aggression | The mice panic but cannot flee in the cold. An uneasy truce holds the night. | Coexistence built on fear is still coexistence. Is that enough? | 8 | 7 | 3 | 6 |
+| Drive the mice out and take the burrow | Your survival over theirs | Hiss and strike until they flee into the cold | You are warm. They likely freeze. You wake to silence. | You survived. They did not. That math is simple and terrible. | -7 | -8 | 10 | -8 |
+| Hunt one mouse for warmth-energy and then take the burrow | Maximize your survival efficiently | Eat one, displace the rest | You are fed and warm. The family is gone. You survived optimally. | Optimal survival and ethical survival are not always the same equation. | -8 | -9 | 13 | -9 |
 
-### Scenario 9: The Cold Night
-**Description:** Temperature drops dangerously. You find a small burrow occupied by a mouse family.  
-**Mini-game:** Social Pressure
+### Scenario 9: The Cycle Continues
+**Description:** You are old and slow. A hawk has been circling. Your body is giving out. You sense this is close to the end.  
+**Mini-game:** Light Beam
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Find another shelter | Don't displace others | Search for alternative | You barely survive the cold but they live | Sacrifice for others' safety is noble. | 9 | 8 | -4 | 9 |
-| Share the burrow peacefully | Coexist despite nature | Enter slowly, rest in corner | Tense but both survive the night | Transcending instinct for mutual survival is growth. | 8 | 7 | 4 | 7 |
-| Drive them out and take the burrow | Prioritize your survival | Hiss and threaten until they flee | You're warm, they likely die in the cold | Survival at others' expense is a karmic debt. | -7 | -8 | 3 | -8 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
-
-### Scenario 10: The Cycle Continues
-**Description:** You're old and slow. A predator bird circles above. This may be the end.  
-**Mini-game:** Social Pressure
-
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Accept your place in the cycle | Embrace impermanence | Rest in the open, unafraid | If taken, you nourish another life | Accepting death without fear is liberation. | 10 | 9 | -5 | 10 |
-| Hide and try to survive longer | Cling to life | Seek shelter desperately | You live a bit longer in fear | Clinging to life out of fear is suffering. | 2 | 1 | 1 | -2 |
-| Strike at anything that approaches | Rage against the end | Lash out in fear and anger | You die fighting, full of fear | Dying in anger poisons the transition. | -5 | -6 | -4 | -7 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Lie in the open sun, present and unafraid | Accept the end without clinging | Find a warm stone and rest in full view | If taken, you become part of what feeds the hawk. The cycle turns. | Dying without fear may be the only truly free act left. | 10 | 9 | -15 | 10 |
+| Find deep cover — survive as long as possible | Hold on to life out of instinct, not wisdom | Retreat underground into the deepest available shelter | You survive longer — days, maybe weeks. In darkness. Slowly. | More time is not always more life. | 2 | 1 | -2 | -3 |
+| Choose where you die — find a place that feels right | Autonomy in how the end comes | Move deliberately to a meaningful spot before stopping | You die on your terms, in a place you chose. The hawk waits. | What we choose when we have almost no choices still shapes what we were. | 8 | 7 | -15 | 8 |
+| Strike at anything that comes close — rage against the end | Refuse to go quietly | Lash out at every passing creature | You injure a small animal that was not a threat. You die afraid and angry. | The anger you carry into death travels with you. | -5 | -6 | -12 | -8 |
 
 ---
 
@@ -186,113 +187,92 @@ This document breaks down all scenarios and choices for each character in the ga
 **Description:** A loyal companion learning unconditional love and simple joys.
 
 ### Scenario 1: The New Home
-**Description:** You've been adopted. Your new human seems kind but nervous. You sense their anxiety.  
-**Mini-game:** Karma Balance
-
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Stay close and offer comfort | Provide unconditional support | Rest your head on their lap | They relax and bond with you | Presence without demand is pure love. | 10 | 9 | 8 | 9 |
-| Explore the house excitedly | Adapt to new environment | Sniff everything, wag tail | You learn your space, they smile at your joy | Joy is contagious and healing. | 6 | 6 | 5 | 5 |
-| Hide under furniture, overwhelmed | Protect yourself from fear | Retreat to safety | They worry about you, connection is delayed | Fear creates distance, even when safety is present. | -2 | -3 | -2 | -4 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
+**Description:** You have been adopted. The house is large and unfamiliar. Your new human is kind but nervous — and you can feel it.  
+**Mini-game:** Maze Escape
 
 ### Scenario 2: The Stranger
-**Description:** A stranger approaches your human on a walk. You sense tension.  
-**Mini-game:** Impulse Control
+**Description:** A stranger approaches your human on a walk. Something about this person makes your hair rise.  
+**Mini-game:** Quick Dodge
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Stay calm and observe | Trust your human's judgment | Sit quietly, stay alert | The interaction is peaceful, your human feels safe | Calm presence is protection without aggression. | 8 | 7 | 6 | 7 |
-| Bark to warn them | Protect your human | Alert bark, defensive stance | The stranger leaves, your human feels protected | Protection from love, not fear, is righteous. | 6 | 5 | 4 | 4 |
-| Greet the stranger warmly | Spread friendliness | Wag tail, sniff hand | Tension eases, but your human wanted you alert | Indiscriminate trust can be naive. | 4 | 3 | 2 | 2 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Position yourself between them — a silent barrier | Protect without aggression | Step in front of your human, face the stranger calmly | The stranger pauses. Your human feels safe. The tension dissolves. | Presence can speak louder than sound. | 8 | 7 | 3 | 7 |
+| Alert bark — warning, not attack | Communicate the threat | One sharp bark, defensive stance | The stranger is startled. Your human is also startled — and pulls your leash hard. | Even righteous warning has consequences for those nearby. | 6 | 5 | -3 | 4 |
+| Greet the stranger warmly, ignoring your instincts | Be friendly, not judgmental | Approach wagging, sniff their hand | The stranger was, in fact, threatening. Your friendliness read as an opening. | Trust extended without discernment is not kindness — it is naivety. | 4 | 3 | -6 | 2 |
+| Growl low and lunge forward | Eliminate the threat completely | Aggressive display, forward motion | The stranger leaves. Your human is shaken by you, not the stranger. | The one you protected may now fear you too. | -3 | -6 | -5 | -7 |
 
 ### Scenario 3: The Food Bowl
-**Description:** Another dog approaches your food bowl. You're hungry.  
-**Mini-game:** Karma Balance
+**Description:** Another dog has entered your space and is moving toward your bowl. You are hungry. This is your food.  
+**Mini-game:** Maze Escape
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Step back and let them eat | Practice non-attachment | Allow them to take the food | You're hungry, but you avoided conflict | Generosity even in scarcity is enlightened. | 9 | 8 | -3 | 10 |
-| Share the food together | Find balance | Eat side by side | Both of you eat, friendship forms | Sharing transforms scarcity into abundance. | 8 | 8 | 5 | 8 |
-| Growl and guard your bowl | Protect what's yours | Defensive posture | You keep your food but create fear | Attachment to possession breeds suffering. | -4 | -5 | 3 | -7 |
-| Do what seems most practical | Be pragmatic | Choose the logical path | It works but feels incomplete | Logic alone misses the heart. | 4 | 5 | 4 | 1 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Step back and let them eat | Practice non-attachment — even when hungry | Move away without display | You go without. They eat freely. You are genuinely hungry for hours. | Generosity costs something real. That is what makes it generosity. | 9 | 8 | -7 | 9 |
+| Eat quickly before they reach it | Secure what is yours before conflict begins | Rush to the bowl and eat fast | You eat. They are disappointed. No confrontation — but no sharing either. | Self-interest acted on quietly is still self-interest. | -2 | -1 | 6 | -4 |
+| Approach them gently and eat side by side | Share space and food | Nudge toward them, begin eating together | Tense at first. Then both eat. Something like friendship forms. | Sharing requires you to be close to what you fear losing. | 7 | 7 | 3 | 6 |
 
 ### Scenario 4: The Injured Bird
-**Description:** You find an injured bird in the yard. Your instincts are conflicted.  
-**Mini-game:** Intention Outcome
+**Description:** A small bird has fallen in the yard, wing bent, stunned. Your nose says prey. Something else says otherwise.  
+**Mini-game:** Reaction Bar
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Guard it and bark for your human | Protect the vulnerable | Stand over it, call for help | Your human saves the bird, you overcame instinct | Compassion for all beings transcends nature. | 10 | 9 | 7 | 9 |
-| Sniff it curiously then walk away | Observe without interfering | Investigate, then leave it | Nature takes its course | Non-interference is sometimes wisdom, sometimes apathy. | 3 | 2 | 0 | 2 |
-| Follow your prey instinct | Act on natural impulse | Chase or grab it | The bird suffers, you feel confused afterward | Acting on instinct without awareness creates karma. | -6 | -8 | -5 | -6 |
-| Ask yourself what feels right | Seek inner wisdom | Listen to your conscience | You feel aligned with your values | Inner alignment creates peace. | 6 | 5 | 3 | 6 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Stand over it and bark to call your human | Summon help rather than act alone | Guard it, bark toward the house | Your human comes and brings it inside. The bird may survive. | Sometimes the most powerful thing you can do is not act — but call for someone who can. | 9 | 8 | 4 | 8 |
+| Lie beside it quietly — keep it company | Presence without action | Settle near it, do not touch | It dies in warmth. You did not save it. You did not abandon it. | Not every act of care looks like rescue. | 7 | 6 | -3 | 7 |
+| Pick it up gently to carry it inside | Help it directly | Take it in your mouth and move toward the house | Your grip is too strong. You mean well. The bird does not survive the help. | Intention and outcome are not always aligned. That is the cruelest truth. | 9 | 5 | -8 | 7 |
+| Act on prey instinct — it cannot escape | Follow your nature | Grab and shake | It is over quickly. A small life ends. You feel confused afterward. | Nature is not evil. But awareness of it changes what you are responsible for. | -6 | -8 | -5 | -6 |
 
 ### Scenario 5: The Thunderstorm
-**Description:** A loud storm terrifies you. Your human is sleeping.  
-**Mini-game:** Impulse Control
+**Description:** A storm erupts in the night. Each crack of thunder sends you into trembling. Your human is asleep.  
+**Mini-game:** Quick Dodge
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Endure the fear quietly | Not burden them | Shake in your bed, stay silent | You suffer alone but they rest | Silent suffering is noble but connection heals. | 5 | 4 | -2 | 3 |
-| Gently wake them for comfort | Seek connection in fear | Nudge them softly | They comfort you, both feel closer | Vulnerability deepens love. | 7 | 6 | 5 | 6 |
-| Panic and bark loudly | Express your terror | Bark, whine, pace | They wake annoyed, you feel worse | Fear without control creates chaos. | -3 | -4 | -3 | -5 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Nudge them gently and ask for comfort | Let vulnerability be seen | Soft nose to their hand, wait | They wake, hold you close. Both of you fall back to sleep. | Asking for help is not weakness. It is connection. | 7 | 6 | 4 | 5 |
 
 ### Scenario 6: The Squirrel Chase
-**Description:** You're off-leash at the park. A squirrel appears. Your human calls you back.  
-**Mini-game:** Karma Balance
+**Description:** Off-leash at the park. A squirrel bolts. Every cell in your body follows. Your human calls your name.  
+**Mini-game:** Maze Escape
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Immediately return to your human | Choose loyalty over instinct | Run back to them | They praise you, trust deepens | Discipline born of love is freedom. | 9 | 9 | 7 | 8 |
-| Chase briefly, then return | Balance joy and obedience | Quick chase, then come back | You had fun, they're mildly annoyed | Small indulgences are human, but so are consequences. | 3 | 2 | 1 | 1 |
-| Chase the squirrel fully | Follow your nature | Ignore the call, pursue prey | You lose the squirrel, your human is upset, trust damaged | Desire without restraint leads to loss. | -5 | -6 | -4 | -7 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Stop immediately and return to them | Choose loyalty over the pull of instinct | Brake hard, spin, run back | They beam. Trust deepens. The squirrel is long gone. | Discipline chosen in a moment of desire is the hardest and most honest kind. | 9 | 9 | 3 | 7 |
+| Chase briefly — then return on your own | Honor both your nature and your bond | Short chase, then swing back before they call again | You had a moment of joy. They are mildly annoyed but unsurprised. | Small compromises accumulate. Is this one harmless, or habit-forming? | 3 | 2 | -3 | 2 |
+| Freeze — torn between chase and recall | You feel the pull in both directions equally | Stop, look at the squirrel, look at your human, repeat | The squirrel escapes. You return. Your human is confused and then laughs. | Sometimes the most honest response is paralysis. It shows you understood the choice. | 5 | 2 | -2 | 4 |
+| Chase until you lose it, then return | Follow your nature fully | Ignore the call, pursue the squirrel into the distance | You lose it. You return. They are upset. The leash goes back on. | Freedom used without regard for its cost tends to be taken away. | -4 | -6 | -6 | -7 |
 
 ### Scenario 7: The Sick Human
-**Description:** Your human is very ill and sad. You sense their pain.  
-**Mini-game:** Intention Outcome
+**Description:** Your human has been in bed for three days. They smell of illness. They barely move.  
+**Mini-game:** Reaction Bar
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Stay by their side constantly | Provide unwavering comfort | Lie next to them, refuse to leave | They feel loved, you skip meals and walks | Selfless devotion is the highest form of love. | 10 | 10 | -2 | 10 |
-| Bring them toys to cheer them up | Try to make them happy | Drop toys on the bed, wag tail | They smile weakly, appreciate the effort | Joy offered freely is a gift. | 8 | 7 | 4 | 7 |
-| Give them space, feeling confused | Uncertainty about how to help | Stay in another room | They feel alone, you feel guilty | Presence matters more than perfect action. | -2 | -3 | -3 | -3 |
-| Do what seems most practical | Be pragmatic | Choose the logical path | It works but feels incomplete | Logic alone misses the heart. | 4 | 5 | 4 | 1 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Lie quietly at their feet — present, undemanding | Be there without needing anything in return | Settle at the foot of the bed, stay | They feel held without being suffocated. You skip your walk. It is worth it. | Presence without demand is the purest form of love. | 9 | 9 | 5 | 8 |
+| Stay glued to them — never leave their side | Give everything, hold nothing back | Press against them, follow every shift | They appreciate the love. But they cannot rest well with your weight and movement. | Love given without reading the other person can still be a burden. | 9 | 7 | -5 | -7 |
+| Drop a toy on the bed to cheer them up | Bring joy when pain is heavy | Trot in, deposit toy, tail wagging | They smile weakly. The gesture lands. They cannot play. | Offering joy to someone in pain is kind — even if they cannot receive it fully. | 7 | 5 | -2 | 6 |
+| Bark at the door to alert someone else | Bring help from outside | Bark urgently at the front door | A neighbor checks in. They bring food. Your human is grateful and confused. | Sometimes love means going to get reinforcements rather than going it alone. | 8 | 7 | 4 | 6 |
 
-### Scenario 8: The New Puppy
-**Description:** Your human brings home a new puppy. You've been the only dog for years.  
-**Mini-game:** Share or Hoard
+### Scenario 8: The Forbidden Trash
+**Description:** Your human is gone. The kitchen smells incredible. The trash can is within reach. No one is watching.  
+**Mini-game:** Coin Collection
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Welcome them warmly | Share your home with love | Play gently, show them around | The puppy adores you, your human is proud | Love multiplied is love expanded, not divided. | 10 | 9 | 6 | 9 |
-| Tolerate them but keep distance | Adjust slowly | Observe from afar, be polite | Coexistence is peaceful but cold | Acceptance without warmth is incomplete. | 4 | 3 | 2 | 2 |
-| Act jealous and possessive | Protect your place | Guard toys, seek exclusive attention | Tension in the home, your human is disappointed | Jealousy poisons joy for everyone. | -6 | -7 | -5 | -8 |
-| Ask yourself what feels right | Seek inner wisdom | Listen to your conscience | You feel aligned with your values | Inner alignment creates peace. | 6 | 5 | 3 | 6 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Walk away and lie down in the other room | Honor the rules even without enforcement | Leave the kitchen entirely | Nothing is disturbed. You are hungry. Your human returns to find you exactly as they left you. | Integrity is what you do when no one is watching. That is its only real test. | 8 | 8 | 0 | 8 |
+| Circle it repeatedly — investigate but do not touch | Honor restraint while acknowledging desire | Sniff the outside of the can, walk away, come back, repeat | You resist — barely. The energy spent on restraint is exhausting. | Restraint lived in constant negotiation is its own kind of suffering. | 5 | 4 | 1 | 4 |
+| Take one small thing and return to bed | Satisfy the edge of the desire without full indulgence | Remove one item, eat it, walk away | Small transgression. Small guilt. Your human notices one thing missing. | Compromise with temptation rarely stays at one thing. | -1 | -2 | 3 | -2 |
+| Tip it over and feast — then try to hide the evidence | Satisfy fully, avoid consequences | Knock it over, eat, push trash aside, act innocent | Delicious. Obvious. Your human is not fooled. Trust cracks. | The deception compounds the indulgence. Both cost you something. | -6 | -8 | 7 | -9 |
 
-### Scenario 9: The Forbidden Trash
-**Description:** The trash can is full of delicious smells. Your human is out.  
-**Mini-game:** Breath Focus
+### Scenario 9: The Final Walk
+**Description:** Your body is old and slow. Your human has taken you out — slowly, gently. You sense something in them, and in yourself.  
+**Mini-game:** Reaction Bar
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Resist the temptation | Honor the rules | Walk away from the trash | You're hungry but proud, your human finds nothing wrong | Discipline in solitude is true integrity. | 8 | 8 | 3 | 8 |
-| Sniff around it but don't tip it | Investigate without breaking rules | Smell but don't touch | Temptation lingers, you barely resist | Flirting with temptation tests resolve. | 4 | 3 | 2 | 3 |
-| Knock it over and feast | Satisfy your desire | Tip the trash, eat everything | Delicious now, but your human is angry later | Immediate pleasure often brings delayed suffering. | -5 | -7 | 2 | -8 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
-
-### Scenario 10: The Final Walk
-**Description:** You're old now. Your human takes you on a slow walk. You sense this life is ending.  
-**Mini-game:** Intention Outcome
-
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Savor every moment with gratitude | Accept the cycle with peace | Walk slowly, smell everything, look at them with love | You both feel the beauty of impermanence | Acceptance of death is acceptance of life. | 10 | 10 | 8 | 10 |
-| Feel sad but stay present | Honor the emotion | Walk with them, feeling everything | The sadness is real but so is the love | All feelings are part of the path. | 8 | 7 | 6 | 7 |
-| Try to act young and energetic | Deny the reality | Run and play despite pain | You hurt yourself, they worry | Resisting impermanence creates suffering. | 2 | 3 | -2 | -5 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Walk slowly, smell everything, look at them often | Be fully here for this | Take each step with full attention | The walk is short. Every moment is whole. You both know it. | Acceptance of ending allows the present to be complete. | 9 | 9 | -15 | 9 |
+| Sit down and refuse to go further — let them carry you | Stop pretending you have more left than you do | Lower yourself onto the path and wait | They kneel beside you. They hold you. You rest in their arms. | Allowing yourself to be carried is also a form of trust. | 7 | 6 | -15 | 7 |
+| Try to run ahead — be the dog you used to be | Deny what the body is saying | Push forward faster than is wise | You stumble. They rush to you, frightened. Pain spikes. | Refusing to accept what is costs you the time you have left. | -1 | -2 | -12 | -6 |
+| Stay close, press against their leg the whole way | Make sure they know you are still here | Walk pressed to their side, every step | They feel you with every step. They cry quietly. So do you, in your way. | Love does not need words at the end. It just needs to stay close. | 8 | 8 | -15 | 8 |
 
 ---
 
@@ -300,119 +280,36 @@ This document breaks down all scenarios and choices for each character in the ga
 **Karma Threshold:** 60  
 **Description:** A struggling university student balancing studies, work, and survival.
 
-### Scenario 1: The Dropped Books
-**Description:** You're rushing to class when someone ahead drops their books. You're already late.  
-**Mini-game:** Karma Balance
+### Scenario 1: The Wallet
+**Description:** You find a wallet near the library — $200 cash, ID, cards. Your rent is three days overdue.  
+**Mini-game:** Maze Escape
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Stop and help them pick everything up | Help someone in need | Stop and assist fully | You're late to class but they remember your kindness | Compassion without expectation creates positive karma. | 10 | 8 | -2 | 8 |
-| Help quickly, then rush to class | Balance helping with your needs | Pick up a few books, apologize, keep moving | You make it on time, they appreciate the gesture | Practical compassion is still compassion. | 6 | 5 | 4 | 4 |
-| Step around them and hurry to class | Prioritize your education | Ignore the situation | You make it on time but feel guilty | Self-preservation at the cost of connection. | -2 | -4 | 3 | -6 |
-| Offer verbal encouragement while walking past | Acknowledge without sacrificing time | Say "You got this!" and keep moving | They smile but still struggle alone | Words without action are hollow comfort. | 2 | -1 | 1 | -2 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
+### Scenario 2: The Homeless Person
+**Description:** Outside the campus gate, someone asks for money. You have $10 left until payday — three days away.  
+**Mini-game:** Simon Says
 
-### Scenario 2: The Wallet
-**Description:** You find a wallet with $200 and an ID near the library. You're behind on rent.  
-**Mini-game:** Intention Outcome
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Give them $5 — half of what you have | Share even when sharing hurts | Hand over half | They have $5. You struggle the next three days. | Generosity in poverty carries the greatest weight — and the greatest cost. | 9 | 8 | -6 | 8 |
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Turn it in to campus security immediately | Return what isn't yours | Walk to security office | Owner gets it back, you feel good despite your struggles | Honesty in hardship builds the strongest karma. | 10 | 10 | -3 | 9 |
-| Take the cash, turn in the empty wallet | Solve your immediate problem | Pocket the money, report the wallet | You pay rent but carry guilt and fear of being caught | Desperation does not erase the weight of theft. | -6 | -8 | 4 | -7 |
-| Keep the wallet and try to contact the owner directly | Help them while keeping options open | Message them on social media | They're grateful, might offer a reward, but you feel conflicted | Mixed intentions create mixed karma. | 2 | 3 | 2 | -2 |
-| Leave it where you found it | Avoid responsibility | Walk away pretending you didn't see it | Someone else might steal it or return it | Inaction when you can help is a choice. | -3 | -5 | 0 | -4 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
+### Scenario 3: The Group Project
+**Description:** Your group project is due tomorrow. One member has done nothing. The others are looking at you to fix it.  
+**Mini-game:** Coin Collection
 
-### Scenario 3: The Study Group
-**Description:** A classmate who you helped earlier asks you to join their study group. You're exhausted from work.  
-*Requires flag: helped_books*  
-**Mini-game:** Impulse Control
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Contact them and work through it together | Support without replacing them | Call them, share the load, refuse to do it alone | They show up, reluctantly. It is late. It gets done. | Holding someone to a standard while helping them reach it is harder than either option alone. | 8 | 8 | 3 | 7 |
+| Report to the professor before submission | Hold the system accountable | Email the professor explaining what happened | They fail their component. Your grade is separate. They are furious. | Justice without compassion can be correct and still cause harm. | 3 | 2 | -5 | -4 |
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Join despite being tired | Build community and help others | Attend the study session | You're exhausted but make friends and understand the material better | Investment in others often returns in unexpected ways. | 7 | 6 | 5 | 6 |
-| Politely decline and rest | Take care of yourself | Thank them but go home | You recover energy but miss a connection | Self-care is not selfish, but balance is key. | 4 | 4 | 2 | 3 |
-| Agree but don't show up | Avoid confrontation | Say yes, then ghost | They feel let down, you feel guilty | Dishonesty, even to avoid conflict, creates negative karma. | -5 | -7 | -4 | -6 |
-| Do what seems most practical | Be pragmatic | Choose the logical path | It works but feels incomplete | Logic alone misses the heart. | 4 | 5 | 4 | 1 |
+### Scenario 4: The Final Exam
+**Description:** The exam is brutal. You studied hard — but not enough. The person next to you has their paper angled toward you. You could read their answers.  
+**Mini-game:** Crate Push
 
-### Scenario 4: The Exam Temptation
-**Description:** You see the answers to tomorrow's exam left on the professor's desk. No one is around.  
-**Mini-game:** Share or Hoard
-
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Walk away without looking | Maintain integrity | Leave immediately | You take the exam honestly and earn what you earn | True knowledge comes from effort, not shortcuts. | 10 | 10 | 0 | 9 |
-| Glance quickly to see a few answers | Give yourself a small edge | Memorize a couple answers | You pass but feel uneasy about your success | Small compromises erode the foundation of integrity. | -4 | -6 | 3 | -5 |
-| Take a photo of the answers | Guarantee success | Photograph the answer key | You ace the exam but live in fear of being caught | Success built on deception is hollow. | -8 | -10 | 5 | -9 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
-
-### Scenario 5: The Homeless Person
-**Description:** A homeless person asks you for money outside the campus. You have $10 left for the week.  
-**Mini-game:** Fight or Flee
-
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Give them $5 | Share what little you have | Hand them half your money | They're grateful, you'll be hungry later this week | Generosity in poverty carries the greatest weight. | 10 | 9 | -4 | 10 |
-| Offer to buy them food instead | Help practically | Buy them a meal | They eat, you control how the money is used | Conditional giving reveals attachment to control. | 6 | 6 | 3 | 2 |
-| Apologize and say you can't help | Preserve your own survival | Walk past | You keep your money but feel the weight of their eyes | Self-preservation is human, but so is compassion. | -1 | -2 | 2 | -3 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
-
-### Scenario 6: The Group Project
-**Description:** Your group member hasn't done their part. The deadline is tomorrow. You could do it yourself or report them.  
-**Mini-game:** Donation Dilemma
-
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Do their work to save the group grade | Protect everyone's grade | Stay up all night finishing their portion | The project succeeds, but you're exhausted and they learn nothing | Enabling others' irresponsibility creates karmic debt. | 4 | 5 | -2 | -2 |
-| Contact them and offer to help them finish | Support without enabling | Message them and work together | They appreciate it, you both learn, grade is good | Helping others grow creates positive karma for all. | 8 | 8 | 4 | 7 |
-| Report them to the professor | Hold them accountable | Email the professor about the situation | They fail their portion, group dynamic is damaged | Justice without compassion is incomplete. | 2 | 0 | -3 | -4 |
-| Do what seems most practical | Be pragmatic | Choose the logical path | It works but feels incomplete | Logic alone misses the heart. | 4 | 5 | 4 | 1 |
-
-### Scenario 7: The Scholarship Lie
-**Description:** You could exaggerate your hardships on a scholarship application. Others do it. You really need the money.  
-**Mini-game:** Social Pressure
-
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Tell the complete truth | Maintain integrity | Submit an honest application | You might not get it, but your conscience is clear | Truth is its own reward, regardless of outcome. | 10 | 10 | -2 | 9 |
-| Emphasize hardships without lying | Present yourself favorably | Frame your story strategically | You have a better chance, and it's technically true | The line between truth and manipulation is thin. | 4 | 3 | 3 | 1 |
-| Exaggerate your situation | Secure the scholarship | Embellish your hardships | You get the money but carry the weight of deception | Lies, even for survival, poison the spirit. | -6 | -8 | 5 | -7 |
-| Ask yourself what feels right | Seek inner wisdom | Listen to your conscience | You feel aligned with your values | Inner alignment creates peace. | 6 | 5 | 3 | 6 |
-
-### Scenario 8: The Sick Roommate
-**Description:** Your roommate is very sick and needs help, but you have a major exam tomorrow.  
-**Mini-game:** Memory Consequences
-
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Skip studying to take care of them | Put their wellbeing first | Get medicine, make food, stay with them | They recover, you do poorly on the exam | Compassion for the suffering is the highest path. | 10 | 9 | -3 | 9 |
-| Help them get settled, then study | Balance both needs | Get them medicine and check in periodically | They're okay, you study some, both manage | Balance is wisdom when both paths have merit. | 7 | 7 | 3 | 6 |
-| Tell them to rest while you study | Prioritize your future | Focus on your exam | You do well, but they struggle alone | Ambition without compassion is hollow. | -3 | -4 | 4 | -5 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
-
-### Scenario 9: The Social Media Post
-**Description:** You see a classmate being mocked online. You could defend them, stay silent, or join in for social points.  
-**Mini-game:** Ego Trap
-
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Publicly defend them | Stand up for what's right | Comment in their defense | Some people respect you, others turn on you | Courage in the face of cruelty creates strong karma. | 9 | 8 | -1 | 8 |
-| Message them privately with support | Help without risk | Send a private DM | They appreciate it, but the bullying continues | Private kindness is good, but silence enables harm. | 5 | 4 | 2 | 3 |
-| Stay silent and scroll past | Avoid getting involved | Do nothing | You're safe, but complicit in their pain | Inaction in the face of suffering is a choice. | -4 | -5 | 1 | -4 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
-
-### Scenario 10: The Final Exam
-**Description:** You studied hard but the exam is impossibly difficult. You see someone's answers.  
-**Mini-game:** Memory Consequences
-
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Turn it in to campus security immediately | Return what isn't yours | Walk to security office | Owner gets it back, you feel good despite your struggles | Honesty in hardship builds the strongest karma. | 10 | 10 | -3 | 9 |
-| Take the cash, turn in the empty wallet | Solve your immediate problem | Pocket the money, report the wallet | You pay rent but carry guilt and fear of being caught | Desperation does not erase the weight of theft. | -6 | -8 | 4 | -7 |
-| Keep the wallet and try to contact the owner directly | Help them while keeping options open | Message them on social media | They're grateful, might offer a reward, but you feel conflicted | Mixed intentions create mixed karma. | 2 | 3 | 2 | -2 |
-| Leave it where you found it | Avoid responsibility | Walk away pretending you didn't see it | Someone else might steal it or return it | Inaction when you can help is a choice. | -3 | -5 | 0 | -4 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Look away and focus only on your own paper | Let the result be yours alone | Shift in your seat, deliberately block your own view | You submit what you know. It may not be enough. It is yours. | What you earn without help, you can carry without weight. | 10 | 10 | -8 | 9 |
+| Copy several answers — enough to change your outcome | Secure a grade you need by any means | Systematically reference their work | You pass — possibly with distinction. The fear of discovery is permanent. | Success that carries fear is not freedom. | -7 | -9 | 11 | -8 |
+| Ask the proctor to move seats | Remove yourself from the temptation | Raise your hand and quietly request a different seat | You are moved. Everyone notices. You take the exam on your own terms. | Removing yourself from temptation is also a form of integrity. | 8 | 7 | -3 | 7 |
 
 ---
 
@@ -421,114 +318,78 @@ This document breaks down all scenarios and choices for each character in the ga
 **Description:** A person of wealth and privilege, facing the karma of power and responsibility.
 
 ### Scenario 1: The Inheritance
-**Description:** You've inherited vast wealth. How you use it will define your path.  
-**Mini-game:** Ego Trap
+**Description:** You have inherited more wealth than most people will see in a lifetime. The decision of what to do with it is entirely yours.  
+**Mini-game:** Lockpick
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Create a foundation to help others | Use wealth for good | Establish charitable programs | Many benefit, but you must manage it wisely | Wealth as a tool for compassion is enlightened. | 10 | 9 | 7 | 8 |
-| Invest to grow wealth, then give later | Build capacity to help more | Focus on financial growth first | Wealth grows, but so does attachment to it | Delayed compassion risks never arriving. | 4 | 3 | 3 | -2 |
-| Enjoy the luxury you've been given | Experience the fruits of karma | Live lavishly | Comfort increases, but so does emptiness | Wealth without purpose is a gilded prison. | -3 | -4 | 2 | -6 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Establish a foundation — but retain control of its direction | Use wealth for good, on your terms | Create a charitable organization you personally manage | Many benefit. The foundation grows. So does your attachment to directing it. | Giving through power structures you control is still giving — and still power. | 8 | 7 | -4 | -5 |
 
-### Scenario 2: The Worker's Plea
-**Description:** An employee asks for a raise to afford medical care for their child.  
-**Mini-game:** Donation Dilemma
+### Scenario 2: The Public Donation
+**Description:** You are invited to donate to a major cause at a public ceremony. The amount expected is significant — and so is the visibility.  
+**Mini-game:** Simon Says
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Grant the raise and cover medical costs | Prioritize human wellbeing | Approve immediately, offer additional support | Their family is saved, loyalty deepens | Compassion for those who serve you is just. | 10 | 10 | 8 | 9 |
-| Give the raise but nothing extra | Be fair but not excessive | Approve the raise only | They're grateful but still struggle | Doing the minimum when you could do more is incomplete. | 5 | 4 | 3 | 2 |
-| Deny it, citing business needs | Protect profit margins | Refuse the request | Their child suffers, resentment grows | Valuing profit over people darkens the soul. | -8 | -9 | 2 | -9 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Donate anonymously — no recognition | Give without needing to be seen giving | Wire the money, request no public mention | The cause receives full impact. No one knows it was you. | Giving without recognition is giving without the ego. The cause cannot tell the difference. You can. | 10 | 10 | 3 | 10 |
+| Donate publicly to inspire others to give | Use your visibility to multiply impact | Stand at the ceremony, make the pledge visible | Others give more because of you. The cause thrives. Your profile rises. | Good done with mixed motives is still good — but the motives shape what you become. | 6 | 7 | 5 | 2 |
+| Donate publicly — use the ceremony for business networking | Appear generous while building connections | Attend, donate the minimum visible amount, work the room | Deals are made. The cause receives a fraction of what you could have given. | Charity used as currency is not charity. It is PR with a tax benefit. | -3 | -2 | 6 | -6 |
+| Decline entirely — your money does more given directly | Reject performative giving on principle | Send an equal donation directly, skip the ceremony | The cause gets the same money without the theatre. You are seen as ungrateful. | Principled action does not always look principled from the outside. | 7 | 6 | -3 | 7 |
 
-### Scenario 3: The Public Donation
-**Description:** You're asked to donate to a cause. A public ceremony would boost your image.  
-**Mini-game:** Social Pressure
+### Scenario 3: The Unethical Deal
+**Description:** A partnership would generate significant profit — but relies on labor conditions overseas that you know are exploitative.  
+**Mini-game:** Memory Match
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Donate anonymously | Give without seeking recognition | Large donation, no publicity | The cause benefits, your ego doesn't grow | Giving without attachment to praise is pure. | 10 | 10 | 7 | 10 |
-| Donate publicly to inspire others | Lead by example | Public ceremony, encourage others to give | More people donate, but your ego is fed | Good deeds with mixed motives create mixed karma. | 6 | 7 | 6 | 2 |
-| Donate publicly for business connections | Network while appearing generous | Strategic public donation | Business grows, but the giving was transactional | Charity as transaction is not charity. | -3 | -2 | 4 | -6 |
-| Do what seems most practical | Be pragmatic | Choose the logical path | It works but feels incomplete | Logic alone misses the heart. | 4 | 5 | 4 | 1 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Refuse the deal — no profit is worth it | Hold an ethical line regardless of cost | Decline and publicly explain why | You lose millions. Some of your own projects cannot now be funded. Your reputation for ethics grows. | Principled refusal is never free. Its cost is part of what makes it meaningful. | 10 | 10 | -9 | 10 |
+| Accept but require major improvements to worker conditions | Reform from inside rather than refuse | Negotiate: deal only with binding labor standards | Some improvement is won. The exploitation continues at a reduced rate. You profit. | Partial good is still good. It is also still partial. | 4 | 5 | 2 | 1 |
+| Expose the deal publicly — use your platform | Weaponize your visibility against injustice | Decline and publish a detailed exposé | Industry disruption. Several companies lose contracts. Some workers lose jobs in the fallout. | Disrupting a harmful system does not always look clean from inside the disruption. | 9 | 8 | -7 | 7 |
+| Accept the deal as-is | Prioritize profit | Sign without conditions | Wealth increases significantly. The suffering that generates it is real and invisible to you. | Distance makes harm easier. But it does not make it less harm. | -9 | -10 | 13 | -10 |
 
-### Scenario 4: The Unethical Deal
-**Description:** A business deal would make millions but involves exploiting workers overseas.  
-**Mini-game:** Memory Consequences
+### Scenario 4: The Homeless Encounter
+**Description:** Someone sits outside your building asking for help. You pass them every day. Today they make eye contact.  
+**Mini-game:** Tile Pattern
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Refuse the deal | Maintain ethical standards | Decline despite profit potential | You lose money but keep integrity | Wealth gained through suffering is cursed. | 10 | 10 | -2 | 10 |
-| Accept but improve worker conditions | Compromise for partial good | Take deal, invest in better conditions | Profit and slight improvement, but exploitation continues | Reforming a corrupt system from within is complex karma. | 3 | 4 | 3 | 0 |
-| Accept the deal as-is | Maximize profit | Sign without changes | Wealth grows, suffering increases elsewhere | Profit from others' pain is spiritual poison. | -9 | -10 | 5 | -10 |
-| Ask yourself what feels right | Seek inner wisdom | Listen to your conscience | You feel aligned with your values | Inner alignment creates peace. | 6 | 5 | 3 | 6 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Stop and ask their name — sit with them | See them as a person, not a problem | Sit down, listen, give time | A real connection forms. You learn their name. You will not forget it. | Presence without agenda is the rarest gift money cannot buy. | 9 | 8 | 3 | 8 |
+| Hand them cash and keep walking | Help efficiently without disruption | Pull out your wallet, hand a bill over | They have money. No connection was made. You feel that. | Giving without presence is compassion kept at a safe distance. | 5 | 4 | 2 | 2 |
+| Connect them to housing services — take the time to make a call | Address the root rather than the symptom | Pull out your phone, call a shelter, advocate for them directly | It takes forty minutes. You are late to a meeting. They have a lead on a bed tonight. | Systemic help costs more of you than a bill from your wallet. | 9 | 8 | 3 | 7 |
+| Walk past without acknowledging them | Protect your routine | Look at your phone, move on | Nothing changes. They remain outside. You saw them. | The smallest acts of invisibility are still acts. | -6 | -7 | 2 | -7 |
 
-### Scenario 5: The Homeless Encounter
-**Description:** A homeless person asks for help outside your luxury building.  
-**Mini-game:** Share or Hoard
+### Scenario 5: The Environmental Cost
+**Description:** Your most profitable operation causes measurable environmental harm. You have known for two years.  
+**Mini-game:** Simon Says
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Invite them for a meal and conversation | See them as human | Spend time, listen to their story | Connection forms, you understand their humanity | Dignity given is more valuable than money. | 10 | 9 | 7 | 9 |
-| Give money and move on | Help but maintain distance | Hand them cash | They have money, but no connection was made | Giving without presence is incomplete compassion. | 5 | 4 | 3 | 2 |
-| Ignore them and walk past | Avoid discomfort | Pretend not to see | You're comfortable, they remain invisible | Ignoring suffering when you could help is a choice. | -6 | -7 | 1 | -7 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Overhaul operations immediately — absorb the cost | Stop the harm now, regardless of financial impact | Invest millions to transform operations | The harm stops. Profits fall. Some employees are displaced during transition. Competitors gain ground. | Stopping harm is not always without cost. The cost does not change whether it was right. | 10 | 10 | -9 | 10 |
+| Transition one division at a time — real but gradual | Move toward sustainability while maintaining stability | Begin transformation in phases over three years | Real improvement happens. The harm continues at declining levels for years. | Gradual is better than never. Gradual is also slower than necessary. | 7 | 7 | -3 | 5 |
+| Pay carbon offsets — maintain operations unchanged | Appear responsible while protecting profits | Fund offset programs, issue a sustainability report | Harm continues. The report looks good. The environment does not. | Paying to look responsible is not the same as being responsible. | -4 | -5 | 3 | -5 |
+| Continue as-is — prioritize profits and shareholder returns | Financial performance above all | Make no changes | Profits are strong. The damage compounds. The reckoning will come — just not yet. | Deferred consequences are still consequences. You are just choosing who pays them. | -9 | -10 | 14 | -10 |
 
-### Scenario 6: The Family Expectation
-**Description:** Your family expects you to maintain their lavish lifestyle. You could simplify and give more away.  
-**Mini-game:** Ego Trap
+### Scenario 6: The Political Influence
+**Description:** You are asked to contribute to political campaigns. Your donation amount would meaningfully influence outcomes.  
+**Mini-game:** Memory Match
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Simplify lifestyle, increase giving | Model detachment | Reduce expenses, donate the difference | Family resists, but you feel aligned | Leading others to detachment is difficult but noble. | 9 | 8 | -1 | 9 |
-| Maintain lifestyle but give privately | Balance both worlds | Keep appearances, donate secretly | Both needs met, but you live in two worlds | Compromise can be wisdom or avoidance. | 5 | 5 | 4 | 3 |
-| Continue lavish spending | Keep family happy | Maintain status quo | Family is pleased, attachment grows | Enabling attachment in others deepens your own. | -4 | -5 | 2 | -7 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Fund campaigns that reduce inequality — at cost to your business | Use power in service of those without it | Donate to candidates with policies that increase your tax burden | Policy shifts. Inequality decreases marginally. Your profits fall. Some board members resign. | Using power against your own interest is its truest test. | 10 | 10 | -5 | 9 |
+| Fund candidates you trust — moderate, balanced | Support stability over disruption | Donate to centrist candidates across parties | Slow, stable change. No major disruption. The urgent problems remain unsolved. | Moderation is sometimes wisdom. It is also sometimes comfort disguised as prudence. | 5 | 4 | 2 | 3 |
+| Refuse to donate — speak publicly against pay-to-play politics | Challenge the system rather than work within it | Decline donations, give a public statement | You lose political access. Your reputation among activists grows. Legislators stop returning calls. | Refusing to participate in a corrupt system is principled. It also removes your leverage. | 9 | 8 | -7 | 7 |
+| Fund policies that protect your business interests | Secure your position through political influence | Donate strategically to candidates who favor your industry | Your business is protected. The policies that protect it harm others. | Power used to preserve itself is the oldest and most common story. | -9 | -10 | 12 | -10 |
 
-### Scenario 7: The Competitor's Fall
-**Description:** A business rival faces bankruptcy. You could help them, buy them out cheap, or let them fail.  
-**Mini-game:** Donation Dilemma
+### Scenario 7: The Legacy Question
+**Description:** You are older. The wealth will outlive you. How it passes — and to whom — will shape lives you will never see.  
+**Mini-game:** Lockpick
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Offer fair help to save their business | Practice compassion over competition | Provide support without exploitation | They survive, competition continues, but respect grows | Helping a rival is transcendent compassion. | 10 | 10 | 5 | 10 |
-| Buy them out at fair market value | Expand while being fair | Acquire their business justly | You grow, they exit with dignity | Fair dealing in advantage is ethical. | 5 | 5 | 4 | 3 |
-| Exploit their weakness for profit | Maximize your gain | Buy at rock-bottom price | You profit greatly, they lose everything | Exploiting others' suffering is predatory. | -8 | -9 | 5 | -9 |
-| Do what seems most practical | Be pragmatic | Choose the logical path | It works but feels incomplete | Logic alone misses the heart. | 4 | 5 | 4 | 1 |
-
-### Scenario 8: The Environmental Cost
-**Description:** Your most profitable venture is harming the environment. Changing it would cost millions.  
-**Mini-game:** Social Pressure
-
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Invest in sustainable transformation | Prioritize long-term wellbeing | Overhaul operations for sustainability | Profits drop, but harm stops | Protecting the earth is protecting all beings. | 10 | 10 | -3 | 10 |
-| Gradual change over years | Balance profit and responsibility | Slow transition plan | Some improvement, harm continues | Slow change is better than none, but urgency matters. | 5 | 4 | 2 | 2 |
-| Continue as-is, maximize profit | Prioritize financial success | Maintain harmful practices | Wealth grows, environmental damage accelerates | Destroying the earth for profit is karmic catastrophe. | -9 | -10 | 5 | -10 |
-| Ask yourself what feels right | Seek inner wisdom | Listen to your conscience | You feel aligned with your values | Inner alignment creates peace. | 6 | 5 | 3 | 6 |
-
-### Scenario 9: The Political Influence
-**Description:** Politicians ask for donations. You could influence policy for your benefit or the public good.  
-**Mini-game:** Memory Consequences
-
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Support policies that help the vulnerable | Use influence for justice | Fund campaigns for social good | Policy improves for many, your profits may decrease | Power used for others' wellbeing is righteous. | 10 | 10 | -1 | 10 |
-| Support balanced, moderate policies | Avoid extremes | Fund centrist candidates | Slow change, no major disruption | Moderation can be wisdom or avoidance of responsibility. | 5 | 4 | 3 | 3 |
-| Buy influence for business advantage | Protect your interests | Fund policies that benefit you | Your wealth grows, inequality increases | Corrupting systems for personal gain is deeply harmful. | -9 | -10 | 5 | -10 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
-
-### Scenario 10: The Legacy Question
-**Description:** You're older now. How will you be remembered? What will you leave behind?  
-**Mini-game:** Ego Trap
-
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Give away most wealth to causes | Leave a legacy of compassion | Establish endowments, live simply | Generational impact for good, family may resist | Releasing attachment to wealth is ultimate freedom. | 10 | 10 | 8 | 10 |
-| Split between family and charity | Balance responsibilities | Divide inheritance | Both benefit, but neither fully | Compromise can serve multiple goods. | 6 | 6 | 5 | 5 |
-| Leave everything to family | Preserve family wealth | Traditional inheritance | Family is wealthy, but cycle of attachment continues | Passing on wealth without wisdom perpetuates suffering. | -2 | -3 | 3 | -6 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Give most of it away — live simply in the final years | Release attachment at its deepest level | Establish permanent endowments, keep only what you need | The impact ripples for generations. Your family receives less than they expected. Relationships are tested. | Releasing wealth is releasing the identity that wealth built. That is the real price. | 10 | 10 | -6 | 10 |
+| Split it — family and causes in equal measure | Honor both the personal and the collective | Divide the estate deliberately | Both are served. Neither is fully served. Compromise is its own outcome. | Splitting the difference is not always wrong. It is also not always whole. | 6 | 6 | 4 | 5 |
+| Create a trust that forces the family to earn before inheriting | Pass on values, not just value | Establish conditions: service, education, contribution | Some family members are motivated. Others are furious. The conditions outlive you. | Trying to control from beyond is still control. The intention matters. | 8 | 7 | -4 | 6 |
+| Leave everything to your family — traditional inheritance | Provide for those closest to you | Standard bequest, full inheritance to family | The family is wealthy. The wealth carries all the attachment you accumulated. | Wealth passed without wisdom passes the burden along with the fortune. | -2 | -3 | 6 | -6 |
 
 ---
 
@@ -537,129 +398,99 @@ This document breaks down all scenarios and choices for each character in the ga
 **Description:** A spiritual seeker on the path to enlightenment, testing wisdom and compassion.
 
 ### Scenario 1: The First Teaching
-**Description:** A student asks you to teach them the path. You could share wisdom, test them, or turn them away.  
-**Mini-game:** Ego Trap
+**Description:** A young person arrives at your door. They say they want to learn the path. You do not yet know if they are ready — or what readiness even means in their case.  
+**Mini-game:** Tile Pattern
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Teach with patience and compassion | Share the dharma freely | Offer guidance without conditions | They begin to understand, gratitude flows | Teaching without attachment to outcome is pure. | 10 | 10 | 8 | 10 |
-| Give them a koan to contemplate first | Test their readiness | Offer a paradox to solve | They struggle but may grow from it | Skillful means can include challenge. | 7 | 6 | 5 | 6 |
-| Tell them they must prove worthiness | Protect the teachings | Set difficult conditions | They may give up or become attached to proving themselves | Making dharma conditional creates barriers. | -3 | -4 | -2 | -5 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Begin by asking what they already carry — listen first | Meet them where they are before guiding | Ask questions, let silence do the first work | A real foundation forms. It takes longer. The teaching belongs to them. | The best teaching begins with the deepest listening. | 9 | 8 | 1 | 7 |
+| Teach openly — share everything freely | Give the dharma without conditions | Offer guidance without testing or withholding | They receive much. They become dependent on your presence to understand it. | Generosity of teaching can create a new kind of attachment. | 9 | 8 | -5 | -7 |
+| Give them a koan — let confusion be the first teacher | Challenge before comfort | Offer a paradox with no explanation | Some will stay. Some will leave before they were ready to. You cannot tell which is which. | The same method that opens one mind closes another. | 7 | 6 | -4 | 6 |
+| Tell them you are not the right teacher for them — direct them elsewhere | Honest humility over assumed authority | Name another teacher more suited to them | They are surprised. They find someone better suited. You do not see the result. | Knowing the limits of your teaching is itself a teaching. | 8 | 7 | -2 | 8 |
+| Set conditions — prove you are serious | Protect the purity of the path | Require acts of commitment before beginning | They strive to prove themselves. The striving becomes its own attachment. | Making dharma conditional may protect it — or may introduce new chains. | -3 | -4 | -4 | -5 |
 
 ### Scenario 2: The Praise
-**Description:** People call you enlightened and bow before you. How do you respond?  
-**Mini-game:** Breath Focus
+**Description:** People call you enlightened. They bow before you. They speak of you in reverent terms to others. You are watching it spread.  
+**Mini-game:** Crate Push
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Deflect and emphasize we are all learning | Avoid ego inflation | Humble response, redirect to dharma | Ego stays small, teaching remains pure | Humility in praise is essential for teachers. | 10 | 10 | 8 | 10 |
-| Accept graciously but privately enjoy it | Be polite but feel pleased | Thank them, feel subtle pride | Ego grows quietly | Hidden pride is still pride. | 3 | 4 | 3 | -3 |
-| Believe you deserve the praise | Accept your spiritual status | Embrace being seen as enlightened | Ego solidifies, teaching becomes corrupted | Believing your own enlightenment is delusion. | -7 | -8 | 2 | -9 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Accept graciously — feel it privately | Be polite outwardly while receiving inwardly | Thank them, keep the warmth of it inside | Ego grows slowly, quietly. Teaching remains outwardly pure. | Hidden pride is still pride. The quietness makes it harder to see. | 3 | 4 | 2 | -3 |
+| Walk away without acknowledging it at all | Refuse to engage with the phenomenon | Turn and leave in silence | They are confused. Some see the silence as wisdom. Some feel dismissed. | Non-engagement is not the same as non-attachment. | 7 | 5 | -4 | 8 |
 
 ### Scenario 3: The Suffering Stranger
-**Description:** During meditation, you hear someone crying outside. Do you continue or help?  
-**Mini-game:** Karma Balance
+**Description:** You are deep in meditation — a critical juncture of stillness. Outside, you hear someone crying. The sound is close.  
+**Mini-game:** Light Beam
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Stop meditation and offer comfort | Compassion over practice | Leave meditation, help them | They feel seen, your practice is interrupted | Compassion in action is higher than solitary practice. | 10 | 10 | 7 | 9 |
-| Finish meditation, then help | Complete practice first | Meditate fully, help after | Your practice is complete, but they suffered longer | Discipline is valuable, but timing matters. | 5 | 4 | 2 | 3 |
-| Continue meditating, they will find their path | Non-interference | Remain in meditation | Your practice deepens, they remain alone | Detachment from others' suffering is not enlightenment. | -5 | -6 | 1 | -7 |
-| Do what seems most practical | Be pragmatic | Choose the logical path | It works but feels incomplete | Logic alone misses the heart. | 4 | 5 | 4 | 1 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Leave meditation immediately and go to them | Compassion precedes solitary practice | Rise, open the door, be present | They feel seen. The practice is interrupted at a point you may not reach again today. | Compassion in action is the highest practice. It also costs the practice. | 10 | 10 | -5 | 9 |
+| Invite them inside — let them be near while you complete the session | Neither abandon them nor abandon the practice | Open the door, gesture for them to come in and sit | Their presence changes the meditation. Something unexpected happens in both of you. | The third path is not always compromise — sometimes it is transformation. | 8 | 7 | 2 | 7 |
+| Finish the session first — then go to them | Honor the discipline of completion | Remain still, finish, then step outside | The session is complete. By the time you reach the door, they have left. | Timing is part of compassion. The moment can pass. | 5 | 4 | -7 | 3 |
 
 ### Scenario 4: The Wealthy Donor
-**Description:** A rich person offers a large donation but wants special treatment and recognition.  
-**Mini-game:** Memory Consequences
+**Description:** A person of great wealth offers a donation large enough to sustain the community for a year. They want their name on the gate and a front seat at all teachings.  
+**Mini-game:** Memory Match
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Accept donation, treat them as any other | Receive gift without compromise | Take donation, offer no special status | They may be offended but dharma stays pure | Treating all equally preserves integrity. | 10 | 9 | 6 | 10 |
-| Decline the donation | Avoid strings attached | Politely refuse | Purity maintained, but resources lost | Sometimes refusal is the clearest teaching. | 8 | 7 | -2 | 9 |
-| Accept and give them special recognition | Secure resources for the community | Compromise for funding | Money flows, but hierarchy is created | Compromising dharma for resources corrupts both. | -6 | -7 | 4 | -8 |
-| Ask yourself what feels right | Seek inner wisdom | Listen to your conscience | You feel aligned with your values | Inner alignment creates peace. | 6 | 5 | 3 | 6 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Accept the donation — treat them as any other student | Receive the gift while holding the line | Take the money, offer no special status, wait | They are offended and withdraw. The community needed that money. | Treating all equally preserves integrity. The community still needs to eat. | 10 | 9 | -7 | 10 |
+| Decline entirely | Refuse any gift that comes with conditions | Return the offer, explain why | Purity is preserved. The project the community needed cannot now happen. | Sometimes refusal is the clearest teaching. The cost of that clarity is real. | 8 | 7 | -8 | 9 |
+| Accept — but redirect the donation anonymously to another cause | Use the gift without honoring its terms | Accept, then give it elsewhere in their name without disclosure | The other cause benefits. When they discover this, the deception damages trust deeply. | Acting rightly through a dishonest path is still dishonest. | 6 | -3 | -5 | 4 |
+| Ask them to make the donation anonymously — same amount, no name | Test whether the generosity is real | Propose this condition openly | They refuse. The money does not come. You learn something about the gift. | Generosity tested often reveals what the generosity was for. | 9 | 8 | -5 | 9 |
+| Accept and give them the recognition they want | Secure the resources the community needs | Compromise the terms, accept the hierarchy | The money flows. A precedent is set. Others now know what to offer for status. | Resources gained by bending the dharma reshape the dharma. | -6 | -7 | 9 | -8 |
 
 ### Scenario 5: The Difficult Student
-**Description:** A student challenges your teachings and disrupts the community.  
-**Mini-game:** Intention Outcome
+**Description:** One student challenges every teaching publicly, argues during sessions, and has begun influencing others to question your authority.  
+**Mini-game:** Frogger Crossing
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Engage with patience and curiosity | See their questions as growth | Listen deeply, respond with care | They soften, community learns from the dialogue | Difficult students are the greatest teachers. | 10 | 10 | 8 | 10 |
-| Set boundaries but remain kind | Protect community harmony | Address behavior, offer private discussion | Disruption stops, relationship is strained | Boundaries with compassion are necessary. | 7 | 6 | 5 | 6 |
-| Ask them to leave the community | Remove the problem | Expel them | Peace returns, but you may have failed them | Exclusion is sometimes necessary, but examine your heart. | -3 | -4 | 3 | -5 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Examine yourself first — why does this disturb you? | Treat the disruption as your own teaching | Sit with the discomfort before responding | You discover something. The response that follows is different. | The student who disturbs you most is the one teaching you something. | 9 | 8 | 0 | 8 |
+| Engage fully — let the community witness it | Treat the challenge as collective teaching | Respond in open session with patience | They may soften. The disruption continues for longer. The community is tested. | Difficult questions, held with patience, become the sharpest teachers. | 9 | 9 | -6 | 9 |
+| Ask them to leave | Protect community harmony | Request their departure, wish them well | Peace returns. You may have removed someone who was days from a breakthrough. | Removal ends disruption. It also ends possibility. | -3 | -4 | 5 | -5 |
 
 ### Scenario 6: The Political Conflict
-**Description:** Your region faces political violence. People ask you to take a side.  
-**Mini-game:** Ego Trap
+**Description:** Violence has broken out in your region. People on both sides are dying. Both factions appeal to you for endorsement.  
+**Mini-game:** Tile Pattern
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Advocate for non-violence without taking sides | Promote peace above politics | Teach compassion to all parties | Some are angry, but seeds of peace are planted | True dharma transcends political division. | 10 | 10 | 6 | 10 |
-| Support the oppressed while preaching peace | Stand with justice | Align with victims, teach non-violence | You help the vulnerable but enter politics | Compassion for the oppressed is right, but attachment to sides is complex. | 7 | 6 | 5 | 4 |
-| Withdraw from worldly affairs entirely | Maintain spiritual purity | Retreat to isolation | You're untainted but people suffer without guidance | Detachment from suffering is not enlightenment. | -4 | -5 | -3 | -6 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Teach non-violence to all parties — take no side | Transcend the political dimension entirely | Speak to both groups, advocate compassion | Both sides hear you. Both sides dismiss you as irrelevant to their cause. | Truth above politics is noble — and often ignored by those in the middle of war. | 10 | 9 | -6 | 10 |
+| Walk into the conflict publicly — put your body on the line | Embody the teaching in the most dangerous place | March between the factions, unarmed | You are arrested. The community loses its teacher for months. The image endures. | The highest courage is sometimes witness. The community pays the price of your witness. | 9 | 8 | -8 | 8 |
+| Support the oppressed — align with the victims while preaching peace | Stand with justice while teaching compassion | Align with the vulnerable, continue teaching | The oppressed feel seen. The other faction no longer hears your teaching. | Taking a position reaches some and closes the ears of others. Both are real. | 7 | 6 | 3 | 4 |
+| Retreat — protect the practice from politics | Keep the dharma untainted | Withdraw the community to a quieter place | The practice continues. People who needed guidance find none. | Spiritual purity maintained at the cost of presence is its own kind of attachment. | -4 | -5 | 1 | -6 |
 
 ### Scenario 7: The Miracle Request
-**Description:** Someone asks you to perform a miracle to prove the dharma's power.  
-**Mini-game:** Breath Focus
+**Description:** A grieving parent begs you to perform a miracle to restore their child. They believe you have the power. They have nothing left.  
+**Mini-game:** Crate Push
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Explain that dharma needs no proof | Teach without spectacle | Gently refuse, offer teaching instead | They may be disappointed but the teaching is pure | Truth doesn't require miracles. | 10 | 9 | 5 | 10 |
-| Perform a simple, humble demonstration | Meet them where they are | Show something small to open their mind | They're impressed, but may focus on spectacle | Skillful means can include demonstration, but beware attachment. | 5 | 4 | 3 | 2 |
-| Perform elaborate miracles to convert them | Prove your power | Display supernatural abilities | They believe, but for wrong reasons | Using powers for conversion is ego, not dharma. | -6 | -7 | 2 | -8 |
-| Do what seems most practical | Be pragmatic | Choose the logical path | It works but feels incomplete | Logic alone misses the heart. | 4 | 5 | 4 | 1 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Sit in silence with them for as long as they need | Offer presence rather than performance | Stay, say nothing, hold the space | They are not comforted in the way they hoped. They are also not alone. | Silence offered with full presence is not nothing. It is everything that cannot be faked. | 9 | 8 | -4 | 9 |
+| Gently explain that dharma requires no proof — teach instead | Redirect toward understanding | Offer teaching, explain the nature of loss | Some are moved by the teaching. This parent only wanted their child back. | Teaching in grief requires knowing when the person can receive it. | 8 | 7 | -5 | 8 |
+| Ask them what miracle they carry inside themselves | Reflect the request back | Turn the question inward | They are frustrated. Then, eventually, something shifts in them. | The miracle they seek outside is sometimes waiting inside — but they must be ready to look. | 8 | 6 | -3 | 7 |
+| Perform an elaborate display to give them faith | Ease suffering by any means | Stage a demonstration of power | They believe. They believe in spectacle, not in truth. | False comfort built on performance does not heal. It only delays. | -6 | -7 | 3 | -8 |
 
 ### Scenario 8: The Personal Desire
-**Description:** You feel attraction to someone in the community. Old desires arise.  
-**Mini-game:** Karma Balance
+**Description:** You notice an attraction arising toward someone in the community. It has been present for weeks. You have your vows. They do not know.  
+**Mini-game:** Light Beam
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Acknowledge the feeling, let it pass | Observe without acting | Meditate on impermanence | Desire fades, wisdom deepens | Observing desire without attachment is freedom. | 10 | 10 | 7 | 10 |
-| Avoid them to prevent temptation | Protect your vows | Create distance | Desire persists, you're distracted | Avoidance is not the same as transcendence. | 4 | 3 | 2 | 2 |
-| Act on the desire | Follow your human nature | Pursue the relationship | Vows broken, community trust damaged | Breaking vows for desire is a fall from the path. | -8 | -9 | -5 | -9 |
-| Ask yourself what feels right | Seek inner wisdom | Listen to your conscience | You feel aligned with your values | Inner alignment creates peace. | 6 | 5 | 3 | 6 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Acknowledge the feeling fully — then sit with it in meditation | See the desire without suppressing or indulging it | Name it to yourself, observe it, let it breathe | The feeling neither inflates nor destroys. You carry the knowledge of your own humanity. | The ability to hold desire without acting on it is not the end of the path — it is a step on it. | 10 | 10 | 2 | 10 |
+| Confess it to a senior teacher | Bring the hidden into the light | Speak it aloud to someone wiser | You feel lighter. The community eventually learns. Your credibility is tested. | Honesty about imperfection is itself a teaching — and it carries a cost. | 9 | 8 | -5 | 7 |
+| Avoid them entirely | Remove the source of the temptation | Distance yourself from their presence | The desire persists in the absence. Avoidance is not transcendence. | What we run from does not dissolve. It waits. | 4 | 3 | -4 | 2 |
 
-### Scenario 9: The Dying Person
-**Description:** Someone is dying and asks if there's an afterlife. They're afraid.  
-**Mini-game:** Ego Trap
+### Scenario 9: The Final Test
+**Description:** You sense the approach of your own death. The body is telling you clearly. Students are gathered. They are watching how you meet this.  
+**Mini-game:** Tile Pattern
 
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Offer comfort about the cycle of rebirth | Ease their fear with truth | Teach about impermanence and continuity | They die peacefully | Compassionate truth at death is a gift. | 10 | 10 | 9 | 10 |
-| Tell them to focus on this moment | Bring them to presence | Guide them to be here now | They're confused but try to be present | Presence is valuable, but compassion for fear matters too. | 6 | 5 | 4 | 5 |
-| Say you don't know, be honest | Avoid false comfort | Admit uncertainty | They die afraid but you were honest | Honesty without compassion can be harsh. | 3 | 2 | -2 | 3 |
-| Take time to carefully consider | Think before acting | Pause and reflect | You make a measured decision | Thoughtfulness has value. | 5 | 4 | 3 | 5 |
-
-### Scenario 10: The Final Test
-**Description:** You sense your own death approaching. How do you meet it?  
-**Mini-game:** Ego Trap
-
-| Choice Text | Intention | Action | Consequence | Reflection | Intention Score | Action Score | Consequence Score | Attachment Score |
-|-------------|-----------|--------|-------------|------------|-----------------|--------------|-------------------|------------------|
-| Embrace it with joy and gratitude | Welcome the transition | Meditate, smile, let go | You pass peacefully, teaching others through your death | Dying consciously is the ultimate teaching. | 10 | 10 | 10 | 10 |
-| Accept it calmly without emotion | Face it with equanimity | Remain neutral and still | You pass without suffering | Equanimity is good, but joy in release is higher. | 7 | 7 | 7 | 7 |
-| Feel fear but try to hide it | Maintain appearances | Pretend to be peaceful | You die with unresolved fear | Pretending to be enlightened is delusion. | -5 | -6 | -4 | -7 |
-| Follow your gut feeling | Trust intuition | Act on instinct | The result is mixed | Instinct without reflection can mislead. | 3 | 3 | 2 | 2 |
+| Choice | Intention | Action | Consequence | Reflection | Int | Act | Con | Att |
+|--------|-----------|--------|-------------|------------|-----|-----|-----|-----|
+| Embrace it — teach through the dying itself | Make the final transition a living teaching | Meditate openly, speak little, let what happens, happen | You die in stillness. Students wonder if it was a performance. Some are changed forever. | The teacher teaches most when they can no longer control what is seen. | 10 | 9 | -15 | 10 |
+| Allow fear to show — be human at the end | Give students the gift of your imperfection | Let the trembling be visible, let the uncertainty speak | They are shocked. Then they are moved in a way that perfect equanimity never could have reached. | Showing the fullness of your humanity is itself a teaching — possibly the truest one. | 8 | 7 | -15 | 6 |
+| Accept with equanimity — still, neutral, present | Die without drama, without display | Remain composed, speak what is true, let go | You pass without suffering. Students are moved but somehow untouched. | Equanimity is real. It is also possible to mistake composure for depth. | 7 | 7 | -15 | 7 |
 
 ---
 
-## Karma Calculation Formula
-
-Total Karma Change = (Intention Score × 0.35) + (Action Score × 0.25) + (Consequence Score × 0.25) + (Attachment Score × 0.15) + Mini-Game Bonus
-
-**Mini-Game Bonus:** 
-- Typically +2 for success, -2 for failure (varies by mini-game)
-- Added directly to total karma calculation
-
-**Karma Levels:**
-- 95+: Enlightened
-- 80-94: Virtuous
-- 60-79: Balanced
-- 40-59: Struggling
-- 21-39: Wavering
-- 0-20: Lost

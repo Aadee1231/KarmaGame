@@ -88,7 +88,7 @@ export default function Home() {
     const nextLifeId = getNextLifeId(gameState.karma);
     const newVisitedLives = [...new Set([...gameState.visitedLives, gameState.currentLifeId])];
 
-    if (nextLifeId === 'monk' && gameState.karma >= 95 && newVisitedLives.length >= 4) {
+    if (gameState.currentLifeId === 'monk' && gameState.karma >= 99) {
       setGamePhase('true_ending');
       return;
     }
@@ -154,8 +154,8 @@ export default function Home() {
             <div className="bg-green-900/20 rounded-xl p-6 border border-green-500/30">
               <h3 className="text-2xl font-bold text-green-300 mb-4 text-center">How to Win</h3>
               <div className="space-y-3 text-slate-200">
-                <p>• <strong className="text-yellow-300">Goal:</strong> Achieve enlightenment by reaching the Monk life form with 95+ karma.</p>
-                <p>• <strong className="text-yellow-300">Requirement:</strong> Visit at least 4 different life forms before reaching Monk status.</p>
+                <p>• <strong className="text-yellow-300">Goal:</strong> Achieve enlightenment by completing the Monk life with 99+ karma.</p>
+                <p>• <strong className="text-yellow-300">Path:</strong> First reach Monk status (95+ karma), then excel in the Monk scenarios to reach 99+ karma.</p>
                 <p>• <strong className="text-yellow-300">Strategy:</strong> Make compassionate choices, act selflessly, accept consequences gracefully, and practice detachment.</p>
                 <p>• <strong className="text-yellow-300">Progression:</strong> Higher karma leads to better rebirths. Low karma may cause you to regress to lower life forms.</p>
               </div>
